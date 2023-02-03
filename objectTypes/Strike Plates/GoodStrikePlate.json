@@ -1,0 +1,37 @@
+{
+	"name": "GoodStrikePlate",
+	"plugin-id": "Sprite",
+	"sid": 332093342869619,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 117,
+						"height": 97,
+						"originX": 0.49572649572649574,
+						"originY": 0.5360824742268041,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9397780,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 269683445374632,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

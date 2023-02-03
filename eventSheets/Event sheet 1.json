@@ -1,5 +1,207 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 658851574030322,
+					"parameters": {
+						"object": "Anvil"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 233325179752560,
+					"parameters": {
+						"object-to-create": "Sparks",
+						"layer": "\"Interactive\"",
+						"x": "Touch.X",
+						"y": "Touch.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 704315317837589,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PerfectStrikePlate",
+							"sid": 781522172903086,
+							"parameters": {
+								"object": "StrikeItems"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "StrikeSuccess",
+							"sid": 972187792733651,
+							"parameters": [
+								"\"\"\"PERFECT\"\"\""
+							]
+						}
+					],
+					"sid": 328366043797942
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 364285856549108
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "GoodStrikePlate",
+							"sid": 867631352864858,
+							"parameters": {
+								"object": "StrikeItems"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "StrikeSuccess",
+							"sid": 961832601475650,
+							"parameters": [
+								"\"\"\"GOOD\"\"\""
+							]
+						}
+					],
+					"sid": 137343420277902
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 545758196000875
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "OkStrikePlate",
+							"sid": 341080329361629,
+							"parameters": {
+								"object": "StrikeItems"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "StrikeSuccess",
+							"sid": 279404425281994,
+							"parameters": [
+								"\"\"\"OK\"\"\""
+							]
+						}
+					],
+					"sid": 382217153902388
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 977982422993068,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 710652505805154,
+					"parameters": {
+						"object-to-create": "StrikeItems",
+						"layer": "\"Interactive\"",
+						"x": "370",
+						"y": "200",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 772904694640577,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-last-created",
+							"objectClass": "System",
+							"sid": 980009825415062,
+							"parameters": {
+								"object": "StrikeItems"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "StrikeItems",
+							"sid": 321032211424102,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "90"
+							}
+						}
+					],
+					"sid": 485423318359876
+				}
+			]
+		},
+		{
+			"functionName": "StrikeSuccess",
+			"functionDescription": "Handle a successful strike of a mark on the anvil.",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": true,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "StrikeType",
+					"type": "string",
+					"initialValue": "\"OK\"",
+					"comment": "",
+					"sid": 329741313090303
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "StrikeItems",
+					"sid": 531044513173184
+				},
+				{
+					"id": "set-text",
+					"objectClass": "LastStrikeText",
+					"sid": 800780699868782,
+					"parameters": {
+						"text": "StrikeType"
+					}
+				}
+			],
+			"sid": 141423335483843
+		}
+	],
 	"sid": 374245902003053
 }

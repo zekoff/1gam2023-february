@@ -1,0 +1,23 @@
+{
+	"name": "StrikeItems",
+	"plugin-id": "Sprite",
+	"sid": 597212791939420,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 537530444538943
+		},
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 502336775162000
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"GoodMark",
+		"BadMark"
+	]
+}

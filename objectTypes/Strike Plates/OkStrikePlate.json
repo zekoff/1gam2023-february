@@ -1,0 +1,37 @@
+{
+	"name": "OkStrikePlate",
+	"plugin-id": "Sprite",
+	"sid": 153554634862830,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 117,
+						"height": 97,
+						"originX": 0.49572649572649574,
+						"originY": 0.5360824742268041,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7932440,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 373484566327543,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

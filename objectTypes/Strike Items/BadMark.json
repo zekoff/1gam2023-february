@@ -1,0 +1,49 @@
+{
+	"name": "BadMark",
+	"plugin-id": "Sprite",
+	"sid": 338878531107628,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 170,
+						"height": 166,
+						"originX": 0.5058823529411764,
+						"originY": 0.5060240963855421,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8473349,
+						"collisionPoly": {
+							"points": [
+								0.2731527889476103,
+								0.2866964684911521,
+								0.7358832864200372,
+								0.28015283791415657,
+								0.7123373592601103,
+								0.6962942100432986,
+								0.2859965604894302,
+								0.7008681699454068
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 175181808821339,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

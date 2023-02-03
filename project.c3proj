@@ -5,16 +5,92 @@
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "destroy",
+			"name": "Destroy outside layout",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
 	"uniqueId": "u5h0fwf87sl",
 	"objectTypes": {
-		"items": [],
-		"subfolders": []
+		"items": [
+			"Anvil",
+			"Touch",
+			"Sparks",
+			"Keyboard",
+			"LastStrikeText"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"PerfectStrikePlate",
+					"GoodStrikePlate",
+					"OkStrikePlate"
+				],
+				"subfolders": [],
+				"name": "Strike Plates"
+			},
+			{
+				"items": [
+					"GoodMark",
+					"BadMark"
+				],
+				"subfolders": [],
+				"name": "Strike Items"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"StrikeItems"
+		],
 		"subfolders": []
 	},
 	"layouts": {
