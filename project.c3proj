@@ -99,7 +99,9 @@
 			"Bellows",
 			"ThermometerFill",
 			"TempCaret",
-			"TempText"
+			"TempText",
+			"Smoke",
+			"Hammer"
 		],
 		"subfolders": [
 			{
@@ -231,7 +233,8 @@
 	},
 	"timelines": {
 		"items": [
-			"Camera Move"
+			"Camera Move",
+			"Hammer Strike"
 		],
 		"subfolders": [
 			{

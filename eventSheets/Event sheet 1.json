@@ -15,14 +15,39 @@
 			],
 			"actions": [
 				{
+					"id": "set-angle",
+					"objectClass": "Hammer",
+					"sid": 305876991133271,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "stop-timeline-by-tags",
+					"objectClass": "TimelineController",
+					"sid": 962108572787132,
+					"parameters": {
+						"tags": "\"hammer\""
+					}
+				},
+				{
+					"id": "play-timeline",
+					"objectClass": "TimelineController",
+					"sid": 422377759161090,
+					"parameters": {
+						"timeline": "Hammer Strike",
+						"tags": "\"hammer\""
+					}
+				},
+				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 233325179752560,
+					"sid": 792478553294465,
 					"parameters": {
 						"object-to-create": "Sparks",
 						"layer": "\"Interactive\"",
-						"x": "Touch.X",
-						"y": "Touch.Y",
+						"x": "Hammer.ImagePointX(1)",
+						"y": "Hammer.ImagePointY(1)",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
@@ -348,6 +373,14 @@
 						"timeline": "Camera Move",
 						"tags": "\"camera\""
 					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Hammer",
+					"sid": 346939848275154,
+					"parameters": {
+						"angle": "30"
+					}
 				}
 			],
 			"sid": 787454670772048
@@ -418,6 +451,14 @@
 					"parameters": {
 						"y": "TempCaret.Y + 200 * dt"
 					}
+				},
+				{
+					"id": "set-spraying",
+					"objectClass": "Smoke",
+					"sid": 663057599544651,
+					"parameters": {
+						"state": "not-spraying"
+					}
 				}
 			],
 			"sid": 929065147981005
@@ -441,6 +482,14 @@
 					"sid": 853709553819790,
 					"parameters": {
 						"y": "TempCaret.Y - 100 *dt"
+					}
+				},
+				{
+					"id": "set-spraying",
+					"objectClass": "Smoke",
+					"sid": 608014181670548,
+					"parameters": {
+						"state": "spraying"
 					}
 				}
 			],
