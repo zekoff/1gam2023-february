@@ -1,0 +1,73 @@
+{
+	"name": "Bellows",
+	"plugin-id": "Sprite",
+	"sid": 195781450265167,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 300,
+						"height": 300,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6697762,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 300,
+						"height": 300,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6767054,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 300,
+						"height": 300,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1308803,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 300,
+						"height": 300,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4485238,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 360227944482204,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": true,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 10
+			}
+		],
+		"subfolders": []
+	}
+}

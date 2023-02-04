@@ -5,9 +5,9 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-tap-object",
+					"id": "on-touched-object",
 					"objectClass": "Touch",
-					"sid": 658851574030322,
+					"sid": 656231012390551,
 					"parameters": {
 						"object": "Anvil"
 					}
@@ -35,8 +35,33 @@
 					"conditions": [
 						{
 							"id": "is-overlapping-another-object",
+							"objectClass": "OkStrikePlate",
+							"sid": 100790312549661,
+							"parameters": {
+								"object": "BadMark"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "StrikeBadMark",
+							"sid": 392191728755449
+						}
+					],
+					"sid": 555614860433395
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 283239724436674
+						},
+						{
+							"id": "is-overlapping-another-object",
 							"objectClass": "PerfectStrikePlate",
-							"sid": 781522172903086,
+							"sid": 108810189209802,
 							"parameters": {
 								"object": "StrikeItems"
 							}
@@ -45,13 +70,13 @@
 					"actions": [
 						{
 							"callFunction": "StrikeSuccess",
-							"sid": 972187792733651,
+							"sid": 306157690143303,
 							"parameters": [
-								"\"\"\"PERFECT\"\"\""
+								"\"PERFECT\""
 							]
 						}
 					],
-					"sid": 328366043797942
+					"sid": 334051035944702
 				},
 				{
 					"eventType": "block",
@@ -64,7 +89,7 @@
 						{
 							"id": "is-overlapping-another-object",
 							"objectClass": "GoodStrikePlate",
-							"sid": 867631352864858,
+							"sid": 281612568083872,
 							"parameters": {
 								"object": "StrikeItems"
 							}
@@ -73,9 +98,9 @@
 					"actions": [
 						{
 							"callFunction": "StrikeSuccess",
-							"sid": 961832601475650,
+							"sid": 373757463007270,
 							"parameters": [
-								"\"\"\"GOOD\"\"\""
+								"\"GOOD\""
 							]
 						}
 					],
@@ -92,7 +117,7 @@
 						{
 							"id": "is-overlapping-another-object",
 							"objectClass": "OkStrikePlate",
-							"sid": 341080329361629,
+							"sid": 106068215731403,
 							"parameters": {
 								"object": "StrikeItems"
 							}
@@ -101,9 +126,9 @@
 					"actions": [
 						{
 							"callFunction": "StrikeSuccess",
-							"sid": 279404425281994,
+							"sid": 609492991893459,
 							"parameters": [
-								"\"\"\"OK\"\"\""
+								"\"OK\""
 							]
 						}
 					],
@@ -192,15 +217,321 @@
 					"sid": 531044513173184
 				},
 				{
-					"id": "set-text",
-					"objectClass": "LastStrikeText",
-					"sid": 800780699868782,
-					"parameters": {
-						"text": "StrikeType"
-					}
+					"callFunction": "ShowStrikeText",
+					"sid": 754914865651896,
+					"parameters": [
+						"StrikeType"
+					]
 				}
 			],
 			"sid": 141423335483843
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "LastStrikeText",
+					"sid": 501386795128484,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "LastStrikeText",
+					"sid": 658747252021556,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 677819577563106
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 609925161865929
+				}
+			],
+			"actions": [
+				{
+					"id": "start-timer",
+					"objectClass": "MarkSpawner",
+					"sid": 500264044370209,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "0.5",
+						"type": "regular",
+						"tag": "\"Spawn Random Mark\""
+					}
+				}
+			],
+			"sid": 258956932245813
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "MarkSpawner",
+					"sid": 730978689436134,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"Spawn Random Mark\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 118048026461314,
+					"parameters": {
+						"object-to-create": "StrikeItems",
+						"layer": "\"Interactive\"",
+						"x": "MarkSpawner.X",
+						"y": "MarkSpawner.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 232974544781025,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-last-created",
+							"objectClass": "System",
+							"sid": 400869971291808,
+							"parameters": {
+								"object": "StrikeItems"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "StrikeItems",
+							"sid": 473058515989357,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "90"
+							}
+						}
+					],
+					"sid": 697943082849068
+				}
+			]
+		},
+		{
+			"functionName": "StrikeBadMark",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": true,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BadMark",
+					"sid": 393845340244292
+				},
+				{
+					"callFunction": "ShowStrikeText",
+					"sid": 455987528389000,
+					"parameters": [
+						"\"FAIL\""
+					]
+				}
+			],
+			"sid": 917946805326232
+		},
+		{
+			"functionName": "ShowStrikeText",
+			"functionDescription": "Show the parameter string in the \"LastStrikeText\" text box for 1 second.",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "StrikeType",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 877813240882328
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "LastStrikeText",
+					"sid": 471850713638252,
+					"parameters": {
+						"text": "StrikeType"
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "LastStrikeText",
+					"sid": 105336789867863,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "1.0",
+						"type": "once",
+						"tag": "\"\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "LastStrikeText",
+					"sid": 764653704979274,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 633411592994295
+		},
+		{
+			"functionName": "MoveViewport",
+			"functionDescription": "Set viewport to a different location.",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "scroll-to-position",
+					"objectClass": "System",
+					"sid": 815516932422895,
+					"disabled": true,
+					"parameters": {
+						"x": "360",
+						"y": "800"
+					}
+				},
+				{
+					"id": "set-layout-scale",
+					"objectClass": "System",
+					"sid": 934698098691349,
+					"disabled": true,
+					"parameters": {
+						"scale": "2"
+					}
+				},
+				{
+					"id": "play-timeline",
+					"objectClass": "TimelineController",
+					"sid": 757843631351408,
+					"parameters": {
+						"timeline": "Timeline 1",
+						"tags": "\"\""
+					}
+				}
+			],
+			"sid": 544579288971449
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 455350876046872,
+					"parameters": {
+						"key": 86
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "MoveViewport",
+					"sid": 738358619348829
+				}
+			],
+			"sid": 787454670772048
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 317913092102056
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-animation",
+					"objectClass": "Bellows",
+					"sid": 886357781423547
+				}
+			],
+			"sid": 379525292192183
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 553501118604731,
+					"parameters": {
+						"object": "Bellows"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-animation",
+					"objectClass": "Bellows",
+					"sid": 106708315544476
+				}
+			],
+			"sid": 929065147981005
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 212785617488830,
+					"parameters": {
+						"object": "Bellows"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "start-animation",
+					"objectClass": "Bellows",
+					"sid": 841363300954190,
+					"parameters": {
+						"from": "current-frame"
+					}
+				}
+			],
+			"sid": 190342965263782
 		}
 	],
 	"sid": 374245902003053

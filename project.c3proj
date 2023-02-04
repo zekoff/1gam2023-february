@@ -36,6 +36,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Timeline",
+			"name": "Timeline controller",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Touch",
 			"name": "Touch",
 			"author": "Scirra",
@@ -50,8 +57,22 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "destroy",
 			"name": "Destroy outside layout",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -63,7 +84,12 @@
 			"Touch",
 			"Sparks",
 			"Keyboard",
-			"LastStrikeText"
+			"LastStrikeText",
+			"TimelineController",
+			"Camera",
+			"Forge",
+			"Thermometer",
+			"Bellows"
 		],
 		"subfolders": [
 			{
@@ -78,7 +104,8 @@
 			{
 				"items": [
 					"GoodMark",
-					"BadMark"
+					"BadMark",
+					"MarkSpawner"
 				],
 				"subfolders": [],
 				"name": "Strike Items"
