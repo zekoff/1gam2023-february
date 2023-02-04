@@ -1,10 +1,21 @@
 {
-	"name": "Thermometer",
+	"name": "ThermometerFill",
 	"plugin-id": "Sprite",
-	"sid": 636098096058539,
+	"sid": 557931075940034,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 729253247438097
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 886467165519023
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -18,12 +29,12 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5913006,
+						"imageSpriteId": 7637364,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 833756346460021,
+				"sid": 112696763943901,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

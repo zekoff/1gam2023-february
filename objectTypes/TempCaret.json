@@ -1,9 +1,17 @@
 {
-	"name": "GoodMark",
+	"name": "TempCaret",
 	"plugin-id": "Sprite",
-	"sid": 554028595114042,
+	"sid": 490500398062724,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Temp",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 423098830102590
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -11,31 +19,31 @@
 			{
 				"frames": [
 					{
-						"width": 100,
-						"height": 100,
-						"originX": 0.4756756756756757,
-						"originY": 0.5027932960893855,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9869702,
+						"imageSpriteId": 7504062,
 						"collisionPoly": {
 							"points": [
-								0.4611172921316965,
-								0.46107965959821423,
-								0.5400138288225445,
-								0.4594002859933038,
-								0.534235403878348,
-								0.5141293247767855,
-								0.4608543003627232,
-								0.5118276367187503
+								0.0033907470703125,
+								0.4694355468749999,
+								1,
+								0,
+								1,
+								1,
+								0,
+								0.53019140625
 							]
 						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 283984732274950,
+				"sid": 641364018004481,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

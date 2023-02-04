@@ -1,5 +1,5 @@
 {
-	"name": "Timeline 1",
+	"name": "Camera Move",
 	"enabled": true,
 	"interpolationMode": "default",
 	"resultMode": "default",
@@ -36,7 +36,7 @@
 			"initialVisibility": true,
 			"id": "",
 			"virtualPosition": {
-				"offsetX": 0,
+				"offsetX": 720,
 				"offsetY": 0,
 				"useColor": true,
 				"colorSet": false,
@@ -178,7 +178,90 @@
 				"resultMode": "default",
 				"ease": "default",
 				"pathMode": "default",
-				"resizeMode": "",
+				"resizeMode": "default",
+				"expanded": true,
+				"name": "Property Track Folder",
+				"items": [],
+				"subfolders": []
+			}
+		},
+		{
+			"type": "value-track",
+			"name": "Zoom",
+			"project": "u5h0fwf87sl",
+			"enabled": true,
+			"interpolationMode": "continuous",
+			"ease": "default",
+			"initialVisibility": true,
+			"id": "",
+			"keyframes": [
+				{
+					"time": 0,
+					"tags": "",
+					"enabled": true,
+					"ease": "default"
+				},
+				{
+					"time": 0.8,
+					"tags": "",
+					"enabled": true,
+					"ease": "default"
+				},
+				{
+					"time": 1.5,
+					"tags": "",
+					"enabled": true,
+					"ease": "default"
+				}
+			],
+			"propertyTracks": [
+				{
+					"property": "value",
+					"source": {
+						"type": "value",
+						"uid": "value"
+					},
+					"enabled": true,
+					"interpolationMode": "default",
+					"ease": "default",
+					"propertyKeyframes": [
+						{
+							"time": 0,
+							"enabled": true,
+							"ease": "default",
+							"value": 1,
+							"rValue": 1,
+							"aValue": 1,
+							"addons": []
+						},
+						{
+							"time": 0.8,
+							"enabled": true,
+							"ease": "default",
+							"value": 2,
+							"rValue": 2,
+							"aValue": 2,
+							"addons": []
+						},
+						{
+							"time": 1.5,
+							"enabled": true,
+							"ease": "default",
+							"value": 1,
+							"rValue": 1,
+							"aValue": 1,
+							"addons": []
+						}
+					]
+				}
+			],
+			"propertyTracksRoot": {
+				"enabled": true,
+				"interpolationMode": "default",
+				"resultMode": "default",
+				"ease": "default",
+				"pathMode": "default",
+				"resizeMode": "default",
 				"expanded": true,
 				"name": "Property Track Folder",
 				"items": [],

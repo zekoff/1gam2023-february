@@ -57,6 +57,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Timer",
 			"name": "Timer",
 			"author": "Scirra",
@@ -89,7 +96,10 @@
 			"Camera",
 			"Forge",
 			"Thermometer",
-			"Bellows"
+			"Bellows",
+			"ThermometerFill",
+			"TempCaret",
+			"TempText"
 		],
 		"subfolders": [
 			{
@@ -221,7 +231,7 @@
 	},
 	"timelines": {
 		"items": [
-			"Timeline 1"
+			"Camera Move"
 		],
 		"subfolders": [
 			{
@@ -237,11 +247,11 @@
 		"authorEmail": "zekoff@gmail.com",
 		"authorWebsite": "",
 		"appId": "",
-		"pixelRounding": true,
+		"pixelRounding": false,
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
-		"fullscreenMode": "letterbox-integer-scale",
+		"fullscreenMode": "letterbox-scale",
 		"fullscreenQuality": "low",
 		"viewportFit": "auto",
 		"backgroundColor": [

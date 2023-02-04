@@ -137,62 +137,6 @@
 			]
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 977982422993068,
-					"parameters": {
-						"key": 32
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 710652505805154,
-					"parameters": {
-						"object-to-create": "StrikeItems",
-						"layer": "\"Interactive\"",
-						"x": "370",
-						"y": "200",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				}
-			],
-			"sid": 772904694640577,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-last-created",
-							"objectClass": "System",
-							"sid": 980009825415062,
-							"parameters": {
-								"object": "StrikeItems"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-angle-of-motion",
-							"objectClass": "StrikeItems",
-							"sid": 321032211424102,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"angle": "90"
-							}
-						}
-					],
-					"sid": 485423318359876
-				}
-			]
-		},
-		{
 			"functionName": "StrikeSuccess",
 			"functionDescription": "Handle a successful strike of a mark on the anvil.",
 			"functionCategory": "",
@@ -250,30 +194,6 @@
 				}
 			],
 			"sid": 677819577563106
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 609925161865929
-				}
-			],
-			"actions": [
-				{
-					"id": "start-timer",
-					"objectClass": "MarkSpawner",
-					"sid": 500264044370209,
-					"behaviorType": "Timer",
-					"parameters": {
-						"duration": "0.5",
-						"type": "regular",
-						"tag": "\"Spawn Random Mark\""
-					}
-				}
-			],
-			"sid": 258956932245813
 		},
 		{
 			"eventType": "block",
@@ -408,48 +328,6 @@
 			"sid": 633411592994295
 		},
 		{
-			"functionName": "MoveViewport",
-			"functionDescription": "Set viewport to a different location.",
-			"functionCategory": "",
-			"functionReturnType": "none",
-			"functionCopyPicked": false,
-			"functionIsAsync": false,
-			"functionParameters": [],
-			"eventType": "function-block",
-			"conditions": [],
-			"actions": [
-				{
-					"id": "scroll-to-position",
-					"objectClass": "System",
-					"sid": 815516932422895,
-					"disabled": true,
-					"parameters": {
-						"x": "360",
-						"y": "800"
-					}
-				},
-				{
-					"id": "set-layout-scale",
-					"objectClass": "System",
-					"sid": 934698098691349,
-					"disabled": true,
-					"parameters": {
-						"scale": "2"
-					}
-				},
-				{
-					"id": "play-timeline",
-					"objectClass": "TimelineController",
-					"sid": 757843631351408,
-					"parameters": {
-						"timeline": "Timeline 1",
-						"tags": "\"\""
-					}
-				}
-			],
-			"sid": 544579288971449
-		},
-		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -463,8 +341,13 @@
 			],
 			"actions": [
 				{
-					"callFunction": "MoveViewport",
-					"sid": 738358619348829
+					"id": "play-timeline",
+					"objectClass": "TimelineController",
+					"sid": 367808340464791,
+					"parameters": {
+						"timeline": "Camera Move",
+						"tags": "\"camera\""
+					}
 				}
 			],
 			"sid": 787454670772048
@@ -480,9 +363,31 @@
 			],
 			"actions": [
 				{
+					"id": "start-timer",
+					"objectClass": "MarkSpawner",
+					"sid": 302248621567565,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "0.5",
+						"type": "regular",
+						"tag": "\"Spawn Random Mark\""
+					}
+				},
+				{
 					"id": "stop-animation",
 					"objectClass": "Bellows",
 					"sid": 886357781423547
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "ThermometerFill",
+					"sid": 939763582581075,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "2",
+						"type": "regular",
+						"tag": "\"change direction\""
+					}
 				}
 			],
 			"sid": 379525292192183
@@ -505,9 +410,41 @@
 					"id": "stop-animation",
 					"objectClass": "Bellows",
 					"sid": 106708315544476
+				},
+				{
+					"id": "set-y",
+					"objectClass": "TempCaret",
+					"sid": 878957071893570,
+					"parameters": {
+						"y": "TempCaret.Y + 200 * dt"
+					}
 				}
 			],
 			"sid": 929065147981005
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 385757026484728,
+					"parameters": {
+						"object": "Bellows"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "TempCaret",
+					"sid": 853709553819790,
+					"parameters": {
+						"y": "TempCaret.Y - 100 *dt"
+					}
+				}
+			],
+			"sid": 555859285242699
 		},
 		{
 			"eventType": "block",
@@ -532,6 +469,154 @@
 				}
 			],
 			"sid": 190342965263782
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-playing-by-tags",
+					"objectClass": "TimelineController",
+					"sid": 255735435881397,
+					"parameters": {
+						"tags": "\"camera\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layout-scale",
+					"objectClass": "System",
+					"sid": 554339145520422,
+					"parameters": {
+						"scale": "TimelineController.Value(\"Camera Move\", \"Zoom\")"
+					}
+				}
+			],
+			"sid": 895663058851086
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "ThermometerFill",
+					"sid": 193100051231056,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"change direction\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-position",
+					"objectClass": "ThermometerFill",
+					"sid": 764893792319225,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "ThermometerFill.X",
+						"y": "random(200) - 100 + 300",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 607135905350602
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "TempCaret",
+					"sid": 259797793329112,
+					"parameters": {
+						"comparison": 4,
+						"y-co-ordinate": "450"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "TempCaret",
+					"sid": 359807640918166,
+					"parameters": {
+						"y": "450"
+					}
+				}
+			],
+			"sid": 114653945596600
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "TempCaret",
+					"sid": 686418324195201,
+					"parameters": {
+						"comparison": 2,
+						"y-co-ordinate": "100"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "TempCaret",
+					"sid": 873412000413335,
+					"parameters": {
+						"y": "100"
+					}
+				}
+			],
+			"sid": 892021604799171
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "TempCaret",
+					"sid": 103377818167444,
+					"parameters": {
+						"object": "ThermometerFill"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "TempCaret",
+					"sid": 440822104476644,
+					"parameters": {
+						"instance-variable": "Temp",
+						"value": "100 * dt"
+					}
+				}
+			],
+			"sid": 424497548954975
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 310110635412038
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "TempText",
+					"sid": 568788569230446,
+					"parameters": {
+						"text": "\"Temp: \" & floor(TempCaret.Temp) & \"deg\""
+					}
+				}
+			],
+			"sid": 251300680363335
 		}
 	],
 	"sid": 374245902003053
