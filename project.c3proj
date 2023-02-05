@@ -147,7 +147,9 @@
 				"items": [
 					"WhetstoneBase",
 					"WhetstoneStone",
-					"WhetstoneSupport"
+					"WhetstoneSupport",
+					"Blade",
+					"BladeTouchBox"
 				],
 				"subfolders": [],
 				"name": "Whetstone"

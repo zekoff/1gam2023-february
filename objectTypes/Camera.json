@@ -3,7 +3,15 @@
 	"plugin-id": "Sprite",
 	"sid": 715936377501167,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "SceneLength",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 233389933350887
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "scrollto",

@@ -159,7 +159,7 @@
 				{
 					"type": "OkStrikePlate",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -170,9 +170,9 @@
 					"behaviors": {},
 					"world": {
 						"x": 1111,
-						"y": 992,
+						"y": 999.1649484536082,
 						"width": 420.20416283223386,
-						"height": 154.60341840053886,
+						"height": 117.60341840053886,
 						"originX": 0.49572649572649574,
 						"originY": 0.5360824742268041,
 						"color": [
@@ -188,7 +188,7 @@
 				{
 					"type": "GoodStrikePlate",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -199,9 +199,9 @@
 					"behaviors": {},
 					"world": {
 						"x": 1105,
-						"y": 993,
+						"y": 999.3505154639175,
 						"width": 394.2862295501522,
-						"height": 91.99088313873914,
+						"height": 73.99088313873914,
 						"originX": 0.49572649572649574,
 						"originY": 0.5360824742268041,
 						"color": [
@@ -217,7 +217,7 @@
 				{
 					"type": "PerfectStrikePlate",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -228,9 +228,9 @@
 					"behaviors": {},
 					"world": {
 						"x": 1096,
-						"y": 995,
+						"y": 997.4226804123712,
 						"width": 376.7173521729742,
-						"height": 39.84187495588028,
+						"height": 23.84187495588028,
 						"originX": 0.49572649572649574,
 						"originY": 0.5360824742268041,
 						"color": [
@@ -599,7 +599,7 @@
 							1,
 							1
 						],
-						"angle": 0,
+						"angle": 0.5235987755982988,
 						"zElevation": 0
 					}
 				},
@@ -645,8 +645,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1811,
-						"y": 1091,
+						"x": 1918,
+						"y": 1092,
 						"width": 368.27523343889123,
 						"height": 146.08250926409355,
 						"originX": 0.5,
@@ -675,7 +675,7 @@
 					"behaviors": {
 						"Rotate": {
 							"properties": {
-								"speed": 720,
+								"speed": 360,
 								"acceleration": 0,
 								"enabled": true,
 								"live-preview": false
@@ -683,8 +683,8 @@
 						}
 					},
 					"world": {
-						"x": 1813,
-						"y": 982,
+						"x": 1920,
+						"y": 983,
 						"width": 326.6757000978194,
 						"height": 326.67570009781946,
 						"originX": 0.5,
@@ -712,8 +712,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1815,
-						"y": 1056.5,
+						"x": 1922,
+						"y": 1058,
 						"width": 98.20672891703767,
 						"height": 239.372051283094,
 						"originX": 0.5,
@@ -725,6 +725,66 @@
 							1
 						],
 						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Blade",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Sharpening",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 31,
+					"instanceVariables": {
+						"Sharpness": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1555,
+						"y": 1064,
+						"width": 51,
+						"height": 583.3566756235246,
+						"originX": 0.49019607843137253,
+						"originY": 0.9219143576826196,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.6981317007977318,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BladeTouchBox",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 32,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1606,
+						"y": 933,
+						"width": 250,
+						"height": 424,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.07873421120612645,
 						"zElevation": 0
 					}
 				}
@@ -817,7 +877,9 @@
 						"live-preview": false
 					},
 					"uid": 14,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"SceneLength": 10
+					},
 					"behaviors": {
 						"ScrollTo": {
 							"properties": {

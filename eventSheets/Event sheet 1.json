@@ -379,6 +379,7 @@
 					"id": "set-angle",
 					"objectClass": "Hammer",
 					"sid": 225460807598477,
+					"disabled": true,
 					"parameters": {
 						"angle": "30"
 					}
@@ -412,6 +413,7 @@
 					"id": "set-angle",
 					"objectClass": "Hammer",
 					"sid": 346939848275154,
+					"disabled": true,
 					"parameters": {
 						"angle": "30"
 					}
@@ -441,11 +443,6 @@
 					}
 				},
 				{
-					"id": "stop-animation",
-					"objectClass": "Bellows",
-					"sid": 886357781423547
-				},
-				{
 					"id": "start-timer",
 					"objectClass": "ThermometerFill",
 					"sid": 939763582581075,
@@ -459,13 +456,24 @@
 				{
 					"id": "start-timer",
 					"objectClass": "Camera",
-					"sid": 978139406571550,
+					"sid": 801782062283273,
+					"disabled": true,
 					"behaviorType": "Timer",
 					"parameters": {
-						"duration": "5",
+						"duration": "Camera.SceneLength",
 						"type": "regular",
 						"tag": "\"Move Camera\""
 					}
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "Bellows",
+					"sid": 987589309792212
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "Blade",
+					"sid": 947237724394797
 				}
 			],
 			"sid": 379525292192183
@@ -687,6 +695,235 @@
 				}
 			],
 			"sid": 251300680363335
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 637696589021419,
+					"parameters": {
+						"object": "WhetstoneStone"
+					}
+				},
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 737597977689908,
+					"parameters": {
+						"object": "WhetstoneBase"
+					}
+				},
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 630936960994047,
+					"parameters": {
+						"object": "WhetstoneSupport"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "WhetstoneStone",
+					"sid": 868954591241364,
+					"behaviorType": "Rotate",
+					"parameters": {
+						"speed": "WhetstoneStone.Rotate.Speed + 720*dt"
+					}
+				}
+			],
+			"sid": 851403928142665,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 297227514099289
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 709048169710205,
+					"parameters": {
+						"first-value": "WhetstoneStone.Rotate.Speed",
+						"comparison": 4,
+						"second-value": "30"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "WhetstoneStone",
+					"sid": 263305086212493,
+					"behaviorType": "Rotate",
+					"parameters": {
+						"speed": "WhetstoneStone.Rotate.Speed - 360 * dt"
+					}
+				}
+			],
+			"sid": 108732123647174
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 305765249810050,
+					"parameters": {
+						"object": "Blade"
+					}
+				},
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 455773043080845,
+					"parameters": {
+						"object": "BladeTouchBox"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 809183274239023,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Blade",
+							"sid": 410892028623028,
+							"parameters": {
+								"object": "WhetstoneStone"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "Blade",
+							"sid": 197125214436411,
+							"parameters": {
+								"angle": "Blade.Angle + 60 * dt"
+							}
+						}
+					],
+					"sid": 121173835167096
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 160605829640174,
+					"parameters": {
+						"object": "Blade"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 746218924167468,
+					"parameters": {
+						"object": "BladeTouchBox"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "Blade",
+					"sid": 830551118912718,
+					"parameters": {
+						"angle": "Blade.Angle - 60  * dt"
+					}
+				}
+			],
+			"sid": 936520333037384
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 754346639268059,
+					"parameters": {
+						"value": "Blade.Angle < 40"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "Blade",
+					"sid": 798566321958596,
+					"parameters": {
+						"angle": "40"
+					}
+				}
+			],
+			"sid": 702738535623063
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Blade",
+					"sid": 661259112129443,
+					"parameters": {
+						"object": "WhetstoneStone"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "Blade",
+					"sid": 189329664605849,
+					"parameters": {
+						"instance-variable": "Sharpness",
+						"value": "100 * dt * WhetstoneStone.Rotate.Speed / 360"
+					}
+				}
+			],
+			"sid": 468506991064863
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 206869740967131
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Blade",
+					"sid": 651886151267344,
+					"parameters": {
+						"frame-number": "floor(Blade.Sharpness / 100)"
+					}
+				}
+			],
+			"sid": 473026809308510
 		}
 	],
 	"sid": 374245902003053
