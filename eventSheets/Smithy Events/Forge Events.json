@@ -1,0 +1,224 @@
+{
+	"name": "Forge Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 553501118604731,
+					"parameters": {
+						"object": "Bellows"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-animation",
+					"objectClass": "Bellows",
+					"sid": 106708315544476
+				},
+				{
+					"id": "set-y",
+					"objectClass": "TempCaret",
+					"sid": 878957071893570,
+					"parameters": {
+						"y": "TempCaret.Y + 200 * dt"
+					}
+				},
+				{
+					"id": "set-spraying",
+					"objectClass": "Smoke",
+					"sid": 663057599544651,
+					"parameters": {
+						"state": "not-spraying"
+					}
+				}
+			],
+			"sid": 929065147981005
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 385757026484728,
+					"parameters": {
+						"object": "Bellows"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "TempCaret",
+					"sid": 853709553819790,
+					"parameters": {
+						"y": "TempCaret.Y - 100 *dt"
+					}
+				},
+				{
+					"id": "set-spraying",
+					"objectClass": "Smoke",
+					"sid": 608014181670548,
+					"parameters": {
+						"state": "spraying"
+					}
+				}
+			],
+			"sid": 555859285242699
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 212785617488830,
+					"parameters": {
+						"object": "Bellows"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "start-animation",
+					"objectClass": "Bellows",
+					"sid": 841363300954190,
+					"parameters": {
+						"from": "current-frame"
+					}
+				}
+			],
+			"sid": 190342965263782
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "ThermometerFill",
+					"sid": 193100051231056,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"change direction\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-position",
+					"objectClass": "ThermometerFill",
+					"sid": 764893792319225,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "ThermometerFill.X",
+						"y": "random(200) - 100 + 300",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 607135905350602
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "TempCaret",
+					"sid": 259797793329112,
+					"parameters": {
+						"comparison": 4,
+						"y-co-ordinate": "450"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "TempCaret",
+					"sid": 359807640918166,
+					"parameters": {
+						"y": "450"
+					}
+				}
+			],
+			"sid": 114653945596600
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "TempCaret",
+					"sid": 686418324195201,
+					"parameters": {
+						"comparison": 2,
+						"y-co-ordinate": "100"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "TempCaret",
+					"sid": 873412000413335,
+					"parameters": {
+						"y": "100"
+					}
+				}
+			],
+			"sid": 892021604799171
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "TempCaret",
+					"sid": 103377818167444,
+					"parameters": {
+						"object": "ThermometerFill"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "TempCaret",
+					"sid": 440822104476644,
+					"parameters": {
+						"instance-variable": "Temp",
+						"value": "100 * dt"
+					}
+				}
+			],
+			"sid": 424497548954975
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 310110635412038
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "TempText",
+					"sid": 568788569230446,
+					"parameters": {
+						"text": "\"Temp: \" & floor(TempCaret.Temp) & \"deg\""
+					}
+				}
+			],
+			"sid": 251300680363335
+		}
+	],
+	"sid": 374245902003053
+}

@@ -1,0 +1,357 @@
+{
+	"name": "Anvil Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 218799564457095,
+					"parameters": {
+						"object": "Anvil"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "Hammer",
+					"sid": 982345879891977,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "stop-timeline-by-tags",
+					"objectClass": "TimelineController",
+					"sid": 915044180548996,
+					"parameters": {
+						"tags": "\"hammer\""
+					}
+				},
+				{
+					"id": "play-timeline",
+					"objectClass": "TimelineController",
+					"sid": 817086105544566,
+					"parameters": {
+						"timeline": "Hammer Strike",
+						"tags": "\"hammer\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 457423676011488,
+					"parameters": {
+						"object-to-create": "AnvilSparks",
+						"layer": "\"Interactive\"",
+						"x": "Hammer.ImagePointX(1)",
+						"y": "Hammer.ImagePointY(1)",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 402775764780323,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "OkStrikePlate",
+							"sid": 794506955025887,
+							"parameters": {
+								"object": "BadMark"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "StrikeBadMark",
+							"sid": 672867811358118
+						}
+					],
+					"sid": 863658352340434
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 864802940648270
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PerfectStrikePlate",
+							"sid": 898754102908646,
+							"parameters": {
+								"object": "StrikeItems"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "StrikeSuccess",
+							"sid": 209085822816084,
+							"parameters": [
+								"\"PERFECT\""
+							]
+						}
+					],
+					"sid": 669676411520992
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 452559040084117
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "GoodStrikePlate",
+							"sid": 180767255936817,
+							"parameters": {
+								"object": "StrikeItems"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "StrikeSuccess",
+							"sid": 270807379497986,
+							"parameters": [
+								"\"GOOD\""
+							]
+						}
+					],
+					"sid": 829620384813751
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 385980093369078
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "OkStrikePlate",
+							"sid": 613737222289511,
+							"parameters": {
+								"object": "StrikeItems"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "StrikeSuccess",
+							"sid": 441068269368994,
+							"parameters": [
+								"\"OK\""
+							]
+						}
+					],
+					"sid": 390524249340468
+				}
+			]
+		},
+		{
+			"functionName": "StrikeSuccess",
+			"functionDescription": "Handle a successful strike of a mark on the anvil.",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": true,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "StrikeType",
+					"type": "string",
+					"initialValue": "\"OK\"",
+					"comment": "",
+					"sid": 329741313090303
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "StrikeItems",
+					"sid": 531044513173184
+				},
+				{
+					"callFunction": "ShowStrikeText",
+					"sid": 754914865651896,
+					"parameters": [
+						"StrikeType"
+					]
+				}
+			],
+			"sid": 141423335483843
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "LastStrikeText",
+					"sid": 501386795128484,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "LastStrikeText",
+					"sid": 658747252021556,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 677819577563106
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "MarkSpawner",
+					"sid": 730978689436134,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"Spawn Random Mark\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 118048026461314,
+					"parameters": {
+						"object-to-create": "StrikeItems",
+						"layer": "\"Interactive\"",
+						"x": "MarkSpawner.X",
+						"y": "MarkSpawner.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 232974544781025,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-last-created",
+							"objectClass": "System",
+							"sid": 400869971291808,
+							"parameters": {
+								"object": "StrikeItems"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "StrikeItems",
+							"sid": 473058515989357,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "90"
+							}
+						}
+					],
+					"sid": 697943082849068
+				}
+			]
+		},
+		{
+			"functionName": "StrikeBadMark",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": true,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BadMark",
+					"sid": 393845340244292
+				},
+				{
+					"callFunction": "ShowStrikeText",
+					"sid": 455987528389000,
+					"parameters": [
+						"\"FAIL\""
+					]
+				}
+			],
+			"sid": 917946805326232
+		},
+		{
+			"functionName": "ShowStrikeText",
+			"functionDescription": "Show the parameter string in the \"LastStrikeText\" text box for 1 second.",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "StrikeType",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 877813240882328
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "LastStrikeText",
+					"sid": 471850713638252,
+					"parameters": {
+						"text": "StrikeType"
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "LastStrikeText",
+					"sid": 105336789867863,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "1.0",
+						"type": "once",
+						"tag": "\"\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "LastStrikeText",
+					"sid": 764653704979274,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 633411592994295
+		}
+	],
+	"sid": 237897870155153
+}

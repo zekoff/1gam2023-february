@@ -117,7 +117,7 @@
 				"resultMode": "default",
 				"ease": "default",
 				"pathMode": "default",
-				"resizeMode": "",
+				"resizeMode": "default",
 				"expanded": true,
 				"name": "Property Track Folder",
 				"items": [],

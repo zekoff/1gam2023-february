@@ -98,9 +98,9 @@
 							"resultMode": "default",
 							"ease": "default",
 							"pathMode": "default",
-							"value": 720,
-							"rValue": 720,
-							"aValue": 1080,
+							"value": 1000,
+							"rValue": 1000,
+							"aValue": 1360,
 							"addons": [
 								{
 									"id": "cubic-bezier",

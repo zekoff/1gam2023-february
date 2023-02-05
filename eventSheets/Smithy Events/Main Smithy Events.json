@@ -1,0 +1,126 @@
+{
+	"name": "Main Smithy Events",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Forge Events"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Anvil Events"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Whetstone Events"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Camera",
+					"sid": 931985040266241,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"Move Camera\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play-timeline",
+					"objectClass": "TimelineController",
+					"sid": 399130089911695,
+					"parameters": {
+						"timeline": "Camera Move",
+						"tags": "\"camera\""
+					}
+				}
+			],
+			"sid": 226190877543400
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 455350876046872,
+					"parameters": {
+						"key": 86
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play-timeline",
+					"objectClass": "TimelineController",
+					"sid": 367808340464791,
+					"parameters": {
+						"timeline": "Camera Move",
+						"tags": "\"camera\""
+					}
+				}
+			],
+			"sid": 787454670772048
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 317913092102056
+				}
+			],
+			"actions": [
+				{
+					"id": "start-timer",
+					"objectClass": "MarkSpawner",
+					"sid": 302248621567565,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "0.5",
+						"type": "regular",
+						"tag": "\"Spawn Random Mark\""
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "ThermometerFill",
+					"sid": 939763582581075,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "2",
+						"type": "regular",
+						"tag": "\"change direction\""
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Camera",
+					"sid": 801782062283273,
+					"disabled": true,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "Camera.SceneLength",
+						"type": "regular",
+						"tag": "\"Move Camera\""
+					}
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "Bellows",
+					"sid": 987589309792212
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "Blade",
+					"sid": 947237724394797
+				}
+			],
+			"sid": 379525292192183
+		}
+	],
+	"sid": 164790900203894
+}

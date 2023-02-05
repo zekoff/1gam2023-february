@@ -1,0 +1,118 @@
+{
+	"name": "Design Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 694407024252418
+				}
+			],
+			"actions": [
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 881121327196867,
+					"parameters": {
+						"tag": "\"BladeTypes\"",
+						"file": "BladeTypes.json"
+					}
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 413298421648847,
+					"parameters": {
+						"tag": "\"HiltTypes\"",
+						"file": "HiltTypes.json"
+					}
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 556715835842968,
+					"parameters": {
+						"tag": "\"StyleTypes\"",
+						"file": "StyleTypes.json"
+					}
+				}
+			],
+			"sid": 282188356812472
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 541055732860238,
+					"parameters": {
+						"tag": "\"BladeTypes\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "BladeTypes",
+					"sid": 297883064061025,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 621630582550141
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 753364356683429,
+					"parameters": {
+						"tag": "\"HiltTypes\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "HiltTypes",
+					"sid": 247086430603738,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 623295008646401
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 617340167668289,
+					"parameters": {
+						"tag": "\"StyleTypes\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "StyleTypes",
+					"sid": 960300153347828,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 947691523724488
+		}
+	],
+	"sid": 664807854520110
+}

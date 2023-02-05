@@ -8,6 +8,27 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Dictionary",
+			"name": "Dictionary",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -89,6 +110,13 @@
 			"name": "Scroll To",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
 	"uniqueId": "u5h0fwf87sl",
@@ -97,62 +125,81 @@
 			"Touch",
 			"Keyboard",
 			"TimelineController",
-			"Camera",
+			"Dictionary",
+			"AJAX",
 			"PanelMarker"
 		],
 		"subfolders": [
 			{
 				"items": [
-					"Bellows",
-					"Forge",
-					"Smoke",
-					"TempCaret",
-					"TempText",
-					"Thermometer",
-					"ThermometerFill"
-				],
-				"subfolders": [],
-				"name": "Forge"
-			},
-			{
-				"items": [
-					"Anvil",
-					"Hammer",
-					"LastStrikeText",
-					"Sparks"
+					"Camera"
 				],
 				"subfolders": [
 					{
 						"items": [
-							"GoodMark",
-							"BadMark",
-							"MarkSpawner"
+							"Anvil",
+							"Hammer",
+							"LastStrikeText",
+							"AnvilSparks"
 						],
-						"subfolders": [],
-						"name": "Strike Items"
+						"subfolders": [
+							{
+								"items": [
+									"GoodMark",
+									"BadMark",
+									"MarkSpawner"
+								],
+								"subfolders": [],
+								"name": "Strike Items"
+							},
+							{
+								"items": [
+									"PerfectStrikePlate",
+									"GoodStrikePlate",
+									"OkStrikePlate"
+								],
+								"subfolders": [],
+								"name": "Strike Plates"
+							}
+						],
+						"name": "Anvil"
 					},
 					{
 						"items": [
-							"PerfectStrikePlate",
-							"GoodStrikePlate",
-							"OkStrikePlate"
+							"Bellows",
+							"Forge",
+							"Smoke",
+							"TempCaret",
+							"TempText",
+							"Thermometer",
+							"ThermometerFill"
 						],
 						"subfolders": [],
-						"name": "Strike Plates"
+						"name": "Forge"
+					},
+					{
+						"items": [
+							"WhetstoneBase",
+							"WhetstoneStone",
+							"WhetstoneSupport",
+							"Blade",
+							"BladeTouchBox",
+							"WhetstoneSparks"
+						],
+						"subfolders": [],
+						"name": "Whetstone"
 					}
 				],
-				"name": "Anvil"
+				"name": "Smithy Objects"
 			},
 			{
 				"items": [
-					"WhetstoneBase",
-					"WhetstoneStone",
-					"WhetstoneSupport",
-					"Blade",
-					"BladeTouchBox"
+					"BladeTypes",
+					"HiltTypes",
+					"StyleTypes"
 				],
 				"subfolders": [],
-				"name": "Whetstone"
+				"name": "Design Objects"
 			}
 		]
 	},
@@ -160,9 +207,9 @@
 	"containers": [
 		{
 			"members": [
-				"WhetstoneSupport",
 				"WhetstoneBase",
-				"WhetstoneStone"
+				"WhetstoneStone",
+				"WhetstoneSupport"
 			],
 			"selectMode": "wrap"
 		}
@@ -175,15 +222,27 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Smithy Layout",
+			"Design Layout"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Design Events"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Anvil Events",
+					"Forge Events",
+					"Whetstone Events",
+					"Main Smithy Events"
+				],
+				"subfolders": [],
+				"name": "Smithy Events"
+			}
+		]
 	},
 	"rootFileFolders": {
 		"script": {
@@ -268,7 +327,32 @@
 			"subfolders": []
 		},
 		"general": {
-			"items": [],
+			"items": [
+				{
+					"name": "BladeTypes.json",
+					"type": "application/json",
+					"sid": 173025892524064,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "StyleTypes.json",
+					"type": "application/json",
+					"sid": 979175101194609,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "HiltTypes.json",
+					"type": "application/json",
+					"sid": 618760453164686,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		}
 	},
