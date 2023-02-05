@@ -1,19 +1,14 @@
 {
-	"name": "Camera",
+	"name": "WhetstoneStone",
 	"plugin-id": "Sprite",
-	"sid": 715936377501167,
+	"sid": 932238575609030,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "scrollto",
-			"name": "ScrollTo",
-			"sid": 915082844925988
-		},
-		{
-			"behaviorId": "Timer",
-			"name": "Timer",
-			"sid": 657910969366640
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 333798936964595
 		}
 	],
 	"effectTypes": [],
@@ -22,19 +17,19 @@
 			{
 				"frames": [
 					{
-						"width": 232,
-						"height": 109,
-						"originX": 0.46551724137931033,
-						"originY": 0.5137614678899083,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6392572,
+						"imageSpriteId": 8230636,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 985191018042527,
+				"sid": 876646611541035,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

@@ -356,6 +356,40 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-timer",
+					"objectClass": "Camera",
+					"sid": 931985040266241,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"Move Camera\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play-timeline",
+					"objectClass": "TimelineController",
+					"sid": 399130089911695,
+					"parameters": {
+						"timeline": "Camera Move",
+						"tags": "\"camera\""
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Hammer",
+					"sid": 225460807598477,
+					"parameters": {
+						"angle": "30"
+					}
+				}
+			],
+			"sid": 226190877543400
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
 					"sid": 455350876046872,
@@ -420,6 +454,17 @@
 						"duration": "2",
 						"type": "regular",
 						"tag": "\"change direction\""
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Camera",
+					"sid": 978139406571550,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "5",
+						"type": "regular",
+						"tag": "\"Move Camera\""
 					}
 				}
 			],
@@ -518,30 +563,6 @@
 				}
 			],
 			"sid": 190342965263782
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-playing-by-tags",
-					"objectClass": "TimelineController",
-					"sid": 255735435881397,
-					"parameters": {
-						"tags": "\"camera\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layout-scale",
-					"objectClass": "System",
-					"sid": 554339145520422,
-					"parameters": {
-						"scale": "TimelineController.Value(\"Camera Move\", \"Zoom\")"
-					}
-				}
-			],
-			"sid": 895663058851086
 		},
 		{
 			"eventType": "block",

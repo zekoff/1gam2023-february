@@ -1,40 +1,29 @@
 {
-	"name": "Camera",
+	"name": "WhetstoneBase",
 	"plugin-id": "Sprite",
-	"sid": 715936377501167,
+	"sid": 298775468800758,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "scrollto",
-			"name": "ScrollTo",
-			"sid": 915082844925988
-		},
-		{
-			"behaviorId": "Timer",
-			"name": "Timer",
-			"sid": 657910969366640
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 232,
-						"height": 109,
-						"originX": 0.46551724137931033,
-						"originY": 0.5137614678899083,
+						"width": 300,
+						"height": 119,
+						"originX": 0.5,
+						"originY": -0.05042016806722689,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6392572,
+						"imageSpriteId": 9294202,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 985191018042527,
+				"sid": 854891723493364,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

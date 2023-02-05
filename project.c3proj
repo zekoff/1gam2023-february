@@ -64,6 +64,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Timer",
 			"name": "Timer",
 			"author": "Scirra",
@@ -87,45 +94,77 @@
 	"uniqueId": "u5h0fwf87sl",
 	"objectTypes": {
 		"items": [
-			"Anvil",
 			"Touch",
-			"Sparks",
 			"Keyboard",
-			"LastStrikeText",
 			"TimelineController",
 			"Camera",
-			"Forge",
-			"Thermometer",
-			"Bellows",
-			"ThermometerFill",
-			"TempCaret",
-			"TempText",
-			"Smoke",
-			"Hammer"
+			"PanelMarker"
 		],
 		"subfolders": [
 			{
 				"items": [
-					"PerfectStrikePlate",
-					"GoodStrikePlate",
-					"OkStrikePlate"
+					"Bellows",
+					"Forge",
+					"Smoke",
+					"TempCaret",
+					"TempText",
+					"Thermometer",
+					"ThermometerFill"
 				],
 				"subfolders": [],
-				"name": "Strike Plates"
+				"name": "Forge"
 			},
 			{
 				"items": [
-					"GoodMark",
-					"BadMark",
-					"MarkSpawner"
+					"Anvil",
+					"Hammer",
+					"LastStrikeText",
+					"Sparks"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"GoodMark",
+							"BadMark",
+							"MarkSpawner"
+						],
+						"subfolders": [],
+						"name": "Strike Items"
+					},
+					{
+						"items": [
+							"PerfectStrikePlate",
+							"GoodStrikePlate",
+							"OkStrikePlate"
+						],
+						"subfolders": [],
+						"name": "Strike Plates"
+					}
+				],
+				"name": "Anvil"
+			},
+			{
+				"items": [
+					"WhetstoneBase",
+					"WhetstoneStone",
+					"WhetstoneSupport"
 				],
 				"subfolders": [],
-				"name": "Strike Items"
+				"name": "Whetstone"
 			}
 		]
 	},
 	"autosaveData": null,
-	"containers": [],
+	"containers": [
+		{
+			"members": [
+				"WhetstoneSupport",
+				"WhetstoneBase",
+				"WhetstoneStone"
+			],
+			"selectMode": "wrap"
+		}
+	],
 	"families": {
 		"items": [
 			"StrikeItems"
