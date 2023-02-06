@@ -63,7 +63,34 @@
 					}
 				}
 			],
-			"sid": 621630582550141
+			"sid": 621630582550141,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 558031381506111,
+							"parameters": {
+								"object": "BladeButtons"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BladeButtons",
+							"sid": 330397023139380,
+							"parameters": {
+								"animation": "BladeTypes.At(0, random(10)+1)",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 430482255085098
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -87,7 +114,34 @@
 					}
 				}
 			],
-			"sid": 623295008646401
+			"sid": 623295008646401,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 713014428821303,
+							"parameters": {
+								"object": "HiltButtons"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "HiltButtons",
+							"sid": 159594465498220,
+							"parameters": {
+								"animation": "HiltTypes.At(0, random(6)+1)",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 494532971743404
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -111,7 +165,314 @@
 					}
 				}
 			],
-			"sid": 947691523724488
+			"sid": 947691523724488,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 682346073447816,
+							"parameters": {
+								"object": "StyleButtons"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "StyleButtons",
+							"sid": 319204458806752,
+							"parameters": {
+								"animation": "StyleTypes.At(0, random(6)+1)",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 973411254901660
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 480356263866601,
+					"parameters": {
+						"object": "BladeButtons"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "DesignController",
+					"sid": 265439639809792,
+					"parameters": {
+						"instance-variable": "BladeType",
+						"value": "BladeButtons.AnimationName"
+					}
+				},
+				{
+					"callFunction": "SetMaterial",
+					"sid": 319219872938818
+				}
+			],
+			"sid": 830871874233181,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-evaluate",
+							"objectClass": "System",
+							"sid": 901163414931525,
+							"parameters": {
+								"object": "Label",
+								"expression": "Label.UID = 41"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Label",
+							"sid": 964922931246433,
+							"parameters": {
+								"text": "\"[b]Blade Material:[/b]\" & newline & BladeButtons.AnimationName"
+							}
+						}
+					],
+					"sid": 382218744592541
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 699048770859296,
+					"parameters": {
+						"object": "HiltButtons"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "DesignController",
+					"sid": 334040390020885,
+					"parameters": {
+						"instance-variable": "HiltType",
+						"value": "HiltButtons.AnimationName"
+					}
+				},
+				{
+					"callFunction": "SetMaterial",
+					"sid": 752070479425225
+				}
+			],
+			"sid": 431606350091080,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-evaluate",
+							"objectClass": "System",
+							"sid": 130787664661894,
+							"parameters": {
+								"object": "Label",
+								"expression": "Label.UID = 42"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Label",
+							"sid": 460404846172466,
+							"parameters": {
+								"text": "\"[b]Hilt Type:[/b]\" & newline & HiltButtons.AnimationName"
+							}
+						}
+					],
+					"sid": 439596191364225
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 794552699918599,
+					"parameters": {
+						"object": "StyleButtons"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "DesignController",
+					"sid": 895179939989828,
+					"parameters": {
+						"instance-variable": "StyleType",
+						"value": "StyleButtons.AnimationName"
+					}
+				},
+				{
+					"callFunction": "SetMaterial",
+					"sid": 721676213034346
+				}
+			],
+			"sid": 691583017602691,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-evaluate",
+							"objectClass": "System",
+							"sid": 199643879078100,
+							"parameters": {
+								"object": "Label",
+								"expression": "Label.UID = 40"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Label",
+							"sid": 924589066956651,
+							"parameters": {
+								"text": "\"[b]Style:[/b]\" & newline & StyleButtons.AnimationName"
+							}
+						}
+					],
+					"sid": 984310734264330
+				}
+			]
+		},
+		{
+			"functionName": "SetMaterial",
+			"functionDescription": "Highlight the button with the selected material, and update the attributes of the sword.",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-scale",
+					"objectClass": "StyleButtons",
+					"sid": 668233595599121,
+					"parameters": {
+						"scale": "1"
+					}
+				},
+				{
+					"id": "set-scale",
+					"objectClass": "HiltButtons",
+					"sid": 223436898240727,
+					"parameters": {
+						"scale": "1"
+					}
+				},
+				{
+					"id": "set-scale",
+					"objectClass": "BladeButtons",
+					"sid": 726227766037278,
+					"parameters": {
+						"scale": "1"
+					}
+				}
+			],
+			"sid": 753129198106110,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StyleButtons",
+							"sid": 526454995945054,
+							"parameters": {
+								"animation": "DesignController.StyleType"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-scale",
+							"objectClass": "StyleButtons",
+							"sid": 436735833705281,
+							"parameters": {
+								"scale": "1.5"
+							}
+						}
+					],
+					"sid": 439828131290268
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "HiltButtons",
+							"sid": 390963794317362,
+							"parameters": {
+								"animation": "DesignController.HiltType"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-scale",
+							"objectClass": "HiltButtons",
+							"sid": 518421895241521,
+							"parameters": {
+								"scale": "1.5"
+							}
+						}
+					],
+					"sid": 506001749300100
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "BladeButtons",
+							"sid": 156241620225540,
+							"parameters": {
+								"animation": "DesignController.BladeType"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-scale",
+							"objectClass": "BladeButtons",
+							"sid": 393817739839282,
+							"parameters": {
+								"scale": "1.5"
+							}
+						}
+					],
+					"sid": 543687655406611
+				}
+			]
 		}
 	],
 	"sid": 664807854520110

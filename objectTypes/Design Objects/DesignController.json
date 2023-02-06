@@ -1,0 +1,80 @@
+{
+	"name": "DesignController",
+	"plugin-id": "Sprite",
+	"sid": 494896015767463,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "HiltType",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 180823920371430
+		},
+		{
+			"name": "StyleType",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 157829166460111
+		},
+		{
+			"name": "BladeType",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 549650585522092
+		},
+		{
+			"name": "DMG",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 917612579769516
+		},
+		{
+			"name": "SPD",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 116146306921896
+		},
+		{
+			"name": "DUR",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 618785426691950
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1345556,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 179982692410691,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
