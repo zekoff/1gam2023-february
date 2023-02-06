@@ -210,7 +210,10 @@
 					"BladeButtons",
 					"HiltButtons",
 					"SelectedMaterialBack",
-					"DesignController"
+					"DesignController",
+					"ForgeButton",
+					"ForgeLabel",
+					"WeaponAttributes"
 				],
 				"subfolders": [],
 				"name": "Design Objects"

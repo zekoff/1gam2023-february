@@ -66,6 +66,16 @@
 			"sid": 621630582550141,
 			"children": [
 				{
+					"eventType": "variable",
+					"name": "index",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 881729714644844
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -79,12 +89,30 @@
 					],
 					"actions": [
 						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 720586550133785,
+							"parameters": {
+								"variable": "index",
+								"value": "floor(random(6)+1)"
+							}
+						},
+						{
 							"id": "set-animation",
 							"objectClass": "BladeButtons",
-							"sid": 330397023139380,
+							"sid": 191910817555357,
 							"parameters": {
-								"animation": "BladeTypes.At(0, random(10)+1)",
+								"animation": "BladeTypes.At(0, index)",
 								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "BladeButtons",
+							"sid": 792309634881947,
+							"parameters": {
+								"instance-variable": "DataIndex",
+								"value": "index"
 							}
 						}
 					],
@@ -117,6 +145,16 @@
 			"sid": 623295008646401,
 			"children": [
 				{
+					"eventType": "variable",
+					"name": "index",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 367486142381693
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -130,12 +168,30 @@
 					],
 					"actions": [
 						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 574420164998521,
+							"parameters": {
+								"variable": "index",
+								"value": "floor(random(6)+1)"
+							}
+						},
+						{
 							"id": "set-animation",
 							"objectClass": "HiltButtons",
-							"sid": 159594465498220,
+							"sid": 748153215206880,
 							"parameters": {
-								"animation": "HiltTypes.At(0, random(6)+1)",
+								"animation": "HiltTypes.At(0, index)",
 								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "HiltButtons",
+							"sid": 318541044727897,
+							"parameters": {
+								"instance-variable": "DataIndex",
+								"value": "index"
 							}
 						}
 					],
@@ -168,6 +224,16 @@
 			"sid": 947691523724488,
 			"children": [
 				{
+					"eventType": "variable",
+					"name": "index",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 403575525738199
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -181,12 +247,30 @@
 					],
 					"actions": [
 						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 762721873828482,
+							"parameters": {
+								"variable": "index",
+								"value": "floor(random(6)+1)"
+							}
+						},
+						{
 							"id": "set-animation",
 							"objectClass": "StyleButtons",
-							"sid": 319204458806752,
+							"sid": 332121661330170,
 							"parameters": {
-								"animation": "StyleTypes.At(0, random(6)+1)",
+								"animation": "StyleTypes.At(0, index)",
 								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "StyleButtons",
+							"sid": 942709850137030,
+							"parameters": {
+								"instance-variable": "DataIndex",
+								"value": "index"
 							}
 						}
 					],
@@ -217,8 +301,17 @@
 					}
 				},
 				{
+					"id": "set-instvar-value",
+					"objectClass": "DesignController",
+					"sid": 434499627510179,
+					"parameters": {
+						"instance-variable": "BladeIndex",
+						"value": "BladeButtons.DataIndex"
+					}
+				},
+				{
 					"callFunction": "SetMaterial",
-					"sid": 319219872938818
+					"sid": 706704500655648
 				}
 			],
 			"sid": 830871874233181,
@@ -263,6 +356,15 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "DesignController",
+					"sid": 881808517037603,
+					"parameters": {
+						"instance-variable": "HiltIndex",
+						"value": "HiltButtons.DataIndex"
+					}
+				},
 				{
 					"id": "set-instvar-value",
 					"objectClass": "DesignController",
@@ -319,6 +421,15 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "DesignController",
+					"sid": 774316462990819,
+					"parameters": {
+						"instance-variable": "StyleIndex",
+						"value": "StyleButtons.DataIndex"
+					}
+				},
 				{
 					"id": "set-instvar-value",
 					"objectClass": "DesignController",
@@ -396,6 +507,10 @@
 					"parameters": {
 						"scale": "1"
 					}
+				},
+				{
+					"type": "script",
+					"script": "const dc = runtime.objects.DesignController.getFirstInstance();\nlet dmgTotal = 0;\nlet spdTotal = 0;\nlet durTotal = 0;\nif (dc.instVars.BladeType) {\n\tconst bladeTypeData = runtime.objects.BladeTypes.getFirstInstance();\n\tconst bladeIndex = dc.instVars.BladeIndex;\n\tdmgTotal += bladeTypeData.getAt(1, bladeIndex);\n\tspdTotal += bladeTypeData.getAt(2, bladeIndex);\n\tdurTotal += bladeTypeData.getAt(3, bladeIndex);\n}\nif (dc.instVars.HiltType) {\n\tconst hiltTypeData = runtime.objects.HiltTypes.getFirstInstance();\n\tconst hiltIndex = dc.instVars.HiltIndex;\n\tdmgTotal += hiltTypeData.getAt(1, hiltIndex);\n\tspdTotal += hiltTypeData.getAt(2, hiltIndex);\n\tdurTotal += hiltTypeData.getAt(3, hiltIndex);\n}\nif (dc.instVars.StyleType) {\n\tconst styleTypeData = runtime.objects.StyleTypes.getFirstInstance();\n\tconst styleIndex = dc.instVars.StyleIndex;\n\tdmgTotal += styleTypeData.getAt(1, styleIndex);\n\tspdTotal += styleTypeData.getAt(2, styleIndex);\n\tdurTotal += styleTypeData.getAt(3, styleIndex);\n}\ndc.instVars.DMG = dmgTotal;\ndc.instVars.SPD = spdTotal;\ndc.instVars.DUR = durTotal;\nconst attributeArray = [];\nattributeArray.push(`[b]DMG[/b]: ${dmgTotal}`);\nattributeArray.push(`[b]SPD[/b]: ${spdTotal}`);\nattributeArray.push(`[b]DUR[/b]: ${durTotal}`);\nattributeArray.push(`[b]Total Enhancement[/b]: ${dmgTotal + spdTotal + durTotal}`);\nruntime.objects.WeaponAttributes.getFirstInstance().text = attributeArray.join(\"\\n\");"
 				}
 			],
 			"sid": 753129198106110,
@@ -471,6 +586,103 @@
 						}
 					],
 					"sid": 543687655406611
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 690824025254313,
+							"parameters": {
+								"value": "DesignController.BladeType"
+							}
+						},
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 821208953604505,
+							"parameters": {
+								"value": "DesignController.StyleType"
+							}
+						},
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 341873932677444,
+							"parameters": {
+								"value": "DesignController.HiltType"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ForgeLabel",
+							"sid": 172363858092236,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 802567646905442
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 914844991811006,
+					"parameters": {
+						"object": "ForgeButton"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 648628112498373,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 114003603898453,
+							"parameters": {
+								"value": "DesignController.BladeType"
+							}
+						},
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 617697051223731,
+							"parameters": {
+								"value": "DesignController.StyleType"
+							}
+						},
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 207863939546978,
+							"parameters": {
+								"value": "DesignController.HiltType"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 498551924365454,
+							"parameters": {
+								"layout": "Smithy Layout"
+							}
+						}
+					],
+					"sid": 242569578385385
 				}
 			]
 		}

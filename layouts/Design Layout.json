@@ -22,7 +22,10 @@
 						"BladeType": "",
 						"DMG": 0,
 						"SPD": 0,
-						"DUR": 0
+						"DUR": 0,
+						"HiltIndex": 0,
+						"BladeIndex": 0,
+						"StyleIndex": 0
 					},
 					"behaviors": {},
 					"world": {
@@ -30,6 +33,78 @@
 						"y": 512,
 						"width": 250,
 						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ForgeButton",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 53,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 360,
+						"y": 1152,
+						"width": 448,
+						"height": 160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ForgeLabel",
+					"properties": {
+						"text": "FORGE",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 31.059301757812506,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 55,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 360,
+						"y": 1152,
+						"width": 288,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -86,11 +161,13 @@
 						"live-preview": false
 					},
 					"uid": 43,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"DataIndex": 0
+					},
 					"behaviors": {},
 					"world": {
 						"x": 360,
-						"y": 608,
+						"y": 416,
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,
@@ -115,11 +192,13 @@
 						"live-preview": false
 					},
 					"uid": 45,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"DataIndex": 0
+					},
 					"behaviors": {},
 					"world": {
 						"x": 360,
-						"y": 1184,
+						"y": 992,
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,
@@ -144,11 +223,13 @@
 						"live-preview": false
 					},
 					"uid": 46,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"DataIndex": 0
+					},
 					"behaviors": {},
 					"world": {
 						"x": 488,
-						"y": 608,
+						"y": 416,
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,
@@ -173,11 +254,13 @@
 						"live-preview": false
 					},
 					"uid": 47,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"DataIndex": 0
+					},
 					"behaviors": {},
 					"world": {
 						"x": 232,
-						"y": 608,
+						"y": 416,
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,
@@ -202,11 +285,13 @@
 						"live-preview": false
 					},
 					"uid": 48,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"DataIndex": 0
+					},
 					"behaviors": {},
 					"world": {
-						"x": 224,
-						"y": 896,
+						"x": 232,
+						"y": 704,
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,
@@ -231,11 +316,13 @@
 						"live-preview": false
 					},
 					"uid": 50,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"DataIndex": 0
+					},
 					"behaviors": {},
 					"world": {
 						"x": 488,
-						"y": 1184,
+						"y": 992,
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,
@@ -260,11 +347,13 @@
 						"live-preview": false
 					},
 					"uid": 51,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"DataIndex": 0
+					},
 					"behaviors": {},
 					"world": {
 						"x": 232,
-						"y": 1184,
+						"y": 992,
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,
@@ -289,11 +378,13 @@
 						"live-preview": false
 					},
 					"uid": 49,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"DataIndex": 0
+					},
 					"behaviors": {},
 					"world": {
-						"x": 352,
-						"y": 896,
+						"x": 360,
+						"y": 704,
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,
@@ -318,11 +409,13 @@
 						"live-preview": false
 					},
 					"uid": 54,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"DataIndex": 0
+					},
 					"behaviors": {},
 					"world": {
-						"x": 480,
-						"y": 896,
+						"x": 488,
+						"y": 704,
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,
@@ -399,7 +492,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 360,
-						"y": 544,
+						"y": 352,
 						"width": 288,
 						"height": 96,
 						"originX": 0.5,
@@ -442,7 +535,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 360,
-						"y": 832,
+						"y": 640,
 						"width": 288,
 						"height": 96,
 						"originX": 0.5,
@@ -485,11 +578,54 @@
 					"behaviors": {},
 					"world": {
 						"x": 360,
-						"y": 1088,
+						"y": 896,
 						"width": 288,
 						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "WeaponAttributes",
+					"properties": {
+						"text": "Text",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 24,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 56,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 64,
+						"y": 64,
+						"width": 352,
+						"height": 192,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,

@@ -45,6 +45,27 @@
 			"desc": "",
 			"show": true,
 			"sid": 618785426691950
+		},
+		{
+			"name": "HiltIndex",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 543315756132720
+		},
+		{
+			"name": "BladeIndex",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 903379243650436
+		},
+		{
+			"name": "StyleIndex",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 637203263255259
 		}
 	],
 	"behaviorTypes": [],
