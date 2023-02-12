@@ -31,6 +31,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 844594381490263
+		},
+		{
+			"name": "ImageCharacter",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 950966445372822
 		}
 	]
 }

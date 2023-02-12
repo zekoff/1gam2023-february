@@ -3,10 +3,10 @@
 	"enabled": true,
 	"interpolationMode": "default",
 	"resultMode": "default",
-	"ease": "easeinquad",
+	"ease": "easeoutcubic",
 	"pathMode": "line",
 	"resizeMode": "size",
-	"playheadTime": 0,
+	"playheadTime": 1,
 	"totalTime": 5,
 	"stepTime": 0.1,
 	"useStepTime": true,
@@ -36,7 +36,7 @@
 			"initialVisibility": true,
 			"id": "",
 			"virtualPosition": {
-				"offsetOpacity": 2,
+				"offsetOpacity": 1,
 				"useColor": true,
 				"colorSet": false,
 				"relativeFlags": 2039
@@ -322,7 +322,7 @@
 			"initialVisibility": true,
 			"id": "",
 			"virtualPosition": {
-				"offsetX": -50,
+				"offsetX": -7.032798744049357,
 				"offsetOpacity": 0,
 				"useColor": true,
 				"colorSet": false,
@@ -686,7 +686,7 @@
 			"initialVisibility": true,
 			"id": "",
 			"virtualPosition": {
-				"offsetX": 0,
+				"offsetX": -35.2738698275949,
 				"offsetOpacity": 0,
 				"useColor": true,
 				"colorSet": false,
@@ -987,6 +987,110 @@
 							"value": 42,
 							"rValue": 30,
 							"aValue": 42,
+							"addons": []
+						}
+					]
+				}
+			],
+			"propertyTracksRoot": {
+				"enabled": true,
+				"interpolationMode": "default",
+				"resultMode": "default",
+				"ease": "default",
+				"pathMode": "default",
+				"resizeMode": "",
+				"expanded": true,
+				"name": "Property Track Folder",
+				"items": [],
+				"subfolders": []
+			}
+		},
+		{
+			"type": "instance-track",
+			"worldInstance": 62,
+			"objectType": "SwordFont",
+			"project": "u5h0fwf87sl",
+			"enabled": true,
+			"interpolationMode": "default",
+			"resultMode": "absolute",
+			"ease": "noease",
+			"pathMode": "default",
+			"resizeMode": "default",
+			"initialVisibility": true,
+			"id": "",
+			"virtualPosition": {
+				"offsetOpacity": 0,
+				"useColor": true,
+				"colorSet": false,
+				"relativeFlags": 1655
+			},
+			"keyframes": [
+				{
+					"time": 0,
+					"tags": "",
+					"enabled": true,
+					"ease": "default",
+					"pathMode": "default"
+				},
+				{
+					"time": 1,
+					"tags": "",
+					"enabled": true,
+					"ease": "default",
+					"pathMode": "default"
+				},
+				{
+					"time": 4,
+					"tags": "",
+					"enabled": true,
+					"ease": "default",
+					"pathMode": "default"
+				}
+			],
+			"propertyTracks": [
+				{
+					"property": "offsetOpacity",
+					"source": {
+						"type": "world-instance",
+						"uid": 62
+					},
+					"enabled": true,
+					"interpolationMode": "default",
+					"resultMode": "default",
+					"ease": "default",
+					"pathMode": "none",
+					"propertyKeyframes": [
+						{
+							"time": 0,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "none",
+							"value": 0,
+							"rValue": -1,
+							"aValue": 0,
+							"addons": []
+						},
+						{
+							"time": 1,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "none",
+							"value": 0,
+							"rValue": -1,
+							"aValue": 0,
+							"addons": []
+						},
+						{
+							"time": 4,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "none",
+							"value": 1,
+							"rValue": 0,
+							"aValue": 1,
 							"addons": []
 						}
 					]

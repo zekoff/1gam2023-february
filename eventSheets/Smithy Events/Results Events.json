@@ -59,6 +59,23 @@
 					"parameters": {
 						"text": "\"Quality: \" & floor(SwordParameters.Quality)"
 					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "SwordParameters",
+					"sid": 696810806306321,
+					"parameters": {
+						"instance-variable": "ImageCharacter",
+						"value": "tokenat(\"A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|0|1|2|3\", floor(random(30)), \"|\")"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SwordFont",
+					"sid": 978932941788525,
+					"parameters": {
+						"text": "SwordParameters.ImageCharacter"
+					}
 				}
 			],
 			"sid": 233114345516292

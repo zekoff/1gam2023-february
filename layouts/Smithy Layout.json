@@ -1022,8 +1022,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 3308,
-						"y": 535,
+						"x": 3221,
+						"y": 494,
 						"width": 200,
 						"height": 30,
 						"originX": 0,
@@ -1065,8 +1065,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 3333,
-						"y": 601,
+						"x": 3246,
+						"y": 560,
 						"width": 200,
 						"height": 30,
 						"originX": 0,
@@ -1108,8 +1108,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 3355,
-						"y": 660,
+						"x": 3268,
+						"y": 619,
 						"width": 200,
 						"height": 30,
 						"originX": 0,
@@ -1227,6 +1227,45 @@
 						"y": 1084,
 						"width": 200,
 						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SwordFont",
+					"properties": {
+						"text": "A",
+						"enable-bbcode": true,
+						"character-width": 32,
+						"character-height": 32,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123",
+						"spacing-data": "",
+						"scale": 8,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 62,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3508,
+						"y": 399,
+						"width": 300,
+						"height": 296,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -1577,7 +1616,8 @@
 				"DMG": 0,
 				"SPD": 0,
 				"DUR": 0,
-				"Quality": 100
+				"Quality": 100,
+				"ImageCharacter": "A"
 			}
 		}
 	],
