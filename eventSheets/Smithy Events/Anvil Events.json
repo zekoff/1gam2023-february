@@ -103,10 +103,10 @@
 						{
 							"id": "add-to-instvar",
 							"objectClass": "SwordParameters",
-							"sid": 400709607181378,
+							"sid": 718651686985102,
 							"parameters": {
 								"instance-variable": "Quality",
-								"value": "3 * (SwordParameters.DMG + 1)"
+								"value": "3 * (max(SwordParameters.DMG + 2, 1))"
 							}
 						}
 					],
@@ -133,10 +133,10 @@
 						{
 							"id": "add-to-instvar",
 							"objectClass": "SwordParameters",
-							"sid": 790673660026757,
+							"sid": 855053203824042,
 							"parameters": {
 								"instance-variable": "Quality",
-								"value": "2 * (SwordParameters.DMG + 1)"
+								"value": "2 * (max(SwordParameters.DMG + 2, 1))"
 							}
 						},
 						{
@@ -170,10 +170,10 @@
 						{
 							"id": "add-to-instvar",
 							"objectClass": "SwordParameters",
-							"sid": 454318702283227,
+							"sid": 618536769974467,
 							"parameters": {
 								"instance-variable": "Quality",
-								"value": "1 * (SwordParameters.DMG + 1)"
+								"value": "1 * (max(SwordParameters.DMG + 2, 1))"
 							}
 						},
 						{
@@ -318,10 +318,10 @@
 				{
 					"id": "subtract-from-instvar",
 					"objectClass": "SwordParameters",
-					"sid": 930396516782682,
+					"sid": 854191521760154,
 					"parameters": {
 						"instance-variable": "Quality",
-						"value": "5 * (SwordParameters.DMG + 1)"
+						"value": "5 * (max(SwordParameters.DMG + 2, 1))"
 					}
 				},
 				{

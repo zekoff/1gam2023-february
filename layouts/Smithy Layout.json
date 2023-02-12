@@ -1001,7 +1001,7 @@
 						"text": "DMG",
 						"enable-bbcode": true,
 						"font": "Arial",
-						"size": 12,
+						"size": 19.955480957031252,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -1034,7 +1034,7 @@
 							1,
 							1
 						],
-						"angle": 0,
+						"angle": 6.233649288165211,
 						"zElevation": 0
 					}
 				},
@@ -1044,7 +1044,7 @@
 						"text": "SPD",
 						"enable-bbcode": true,
 						"font": "Arial",
-						"size": 12,
+						"size": 19.955480957031252,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -1077,7 +1077,7 @@
 							1,
 							1
 						],
-						"angle": 0,
+						"angle": 6.233649288165211,
 						"zElevation": 0
 					}
 				},
@@ -1087,7 +1087,7 @@
 						"text": "DUR",
 						"enable-bbcode": true,
 						"font": "Arial",
-						"size": 12,
+						"size": 19.955480957031252,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -1120,7 +1120,7 @@
 							1,
 							1
 						],
-						"angle": 0,
+						"angle": 6.233649288165211,
 						"zElevation": 0
 					}
 				},
@@ -1132,7 +1132,7 @@
 						"font": "Arial",
 						"size": 12,
 						"line-height": 0,
-						"bold": false,
+						"bold": true,
 						"italic": false,
 						"color": [
 							0,
@@ -1202,7 +1202,7 @@
 						"text": "CONTINUE",
 						"enable-bbcode": true,
 						"font": "Arial",
-						"size": 12,
+						"size": 20.094042968750003,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -1223,8 +1223,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 3450,
-						"y": 1086,
+						"x": 3428,
+						"y": 1084,
 						"width": 200,
 						"height": 30,
 						"originX": 0,

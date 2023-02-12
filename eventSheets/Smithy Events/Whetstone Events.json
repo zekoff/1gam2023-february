@@ -296,10 +296,10 @@
 						{
 							"id": "add-to-instvar",
 							"objectClass": "SwordParameters",
-							"sid": 245816066828532,
+							"sid": 655217041724327,
 							"parameters": {
 								"instance-variable": "Quality",
-								"value": "(SwordParameters.SPD + 1) * dt * Blade.AnimationFrame / 2"
+								"value": "max((SwordParameters.SPD + 2), 1) * dt * Blade.AnimationFrame / 2"
 							}
 						}
 					],
@@ -330,10 +330,10 @@
 						{
 							"id": "subtract-from-instvar",
 							"objectClass": "SwordParameters",
-							"sid": 503098944269468,
+							"sid": 683150775518495,
 							"parameters": {
 								"instance-variable": "Quality",
-								"value": "(SwordParameters.SPD + 1) * dt * Blade.AnimationFrame * 10"
+								"value": "max((SwordParameters.SPD + 2), 1) * dt * Blade.AnimationFrame * 10"
 							}
 						}
 					],
