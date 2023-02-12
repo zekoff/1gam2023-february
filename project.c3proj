@@ -189,6 +189,19 @@
 						],
 						"subfolders": [],
 						"name": "Whetstone"
+					},
+					{
+						"items": [
+							"SummaryLabel",
+							"DmgResults",
+							"SpdResults",
+							"DurResults",
+							"QualityResults",
+							"ContinueButton",
+							"Text"
+						],
+						"subfolders": [],
+						"name": "Results"
 					}
 				],
 				"name": "Smithy Objects"
@@ -247,7 +260,8 @@
 					"Anvil Events",
 					"Forge Events",
 					"Whetstone Events",
-					"Main Smithy Events"
+					"Main Smithy Events",
+					"Results Events"
 				],
 				"subfolders": [],
 				"name": "Smithy Events"
@@ -394,7 +408,8 @@
 	"timelines": {
 		"items": [
 			"Camera Move",
-			"Hammer Strike"
+			"Hammer Strike",
+			"Smithing Results"
 		],
 		"subfolders": [
 			{

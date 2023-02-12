@@ -269,7 +269,77 @@
 					}
 				}
 			],
-			"sid": 473026809308510
+			"sid": 473026809308510,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Blade",
+							"sid": 444794807666459,
+							"parameters": {
+								"object": "WhetstoneStone"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Blade",
+							"sid": 296003312546634,
+							"parameters": {
+								"comparison": 3,
+								"number": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "SwordParameters",
+							"sid": 245816066828532,
+							"parameters": {
+								"instance-variable": "Quality",
+								"value": "(SwordParameters.SPD + 1) * dt * Blade.AnimationFrame / 2"
+							}
+						}
+					],
+					"sid": 560263208410412
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Blade",
+							"sid": 472458641120357,
+							"parameters": {
+								"object": "WhetstoneStone"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Blade",
+							"sid": 625019789154149,
+							"parameters": {
+								"comparison": 4,
+								"number": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "SwordParameters",
+							"sid": 503098944269468,
+							"parameters": {
+								"instance-variable": "Quality",
+								"value": "(SwordParameters.SPD + 1) * dt * Blade.AnimationFrame * 10"
+							}
+						}
+					],
+					"sid": 303760406604696
+				}
+			]
 		}
 	],
 	"sid": 550353093758098

@@ -10,6 +10,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 233389933350887
+		},
+		{
+			"name": "SceneCounter",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 506989021140774
 		}
 	],
 	"behaviorTypes": [

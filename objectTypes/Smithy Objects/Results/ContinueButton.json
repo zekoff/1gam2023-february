@@ -1,0 +1,37 @@
+{
+	"name": "ContinueButton",
+	"plugin-id": "Sprite",
+	"sid": 251492286381937,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 247,
+						"height": 127,
+						"originX": 0.4979757085020243,
+						"originY": 0.5354330708661418,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1982388,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 850001515389933,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

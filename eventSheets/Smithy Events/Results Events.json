@@ -1,0 +1,101 @@
+{
+	"name": "Results Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 417226554204467,
+					"parameters": {
+						"value": "Camera.SceneCounter > 2"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 841687889277897
+				}
+			],
+			"actions": [
+				{
+					"id": "play-timeline",
+					"objectClass": "TimelineController",
+					"sid": 680180551410442,
+					"parameters": {
+						"timeline": "Smithing Results",
+						"tags": "\"results\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "DmgResults",
+					"sid": 591267495609297,
+					"parameters": {
+						"text": "\"DMG: \" & SwordParameters.DMG"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SpdResults",
+					"sid": 696006784392737,
+					"parameters": {
+						"text": "\"SPD: \" & SwordParameters.SPD"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "DurResults",
+					"sid": 847706993263658,
+					"parameters": {
+						"text": "\"DUR: \" & SwordParameters.DUR"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "QualityResults",
+					"sid": 944768277944178,
+					"parameters": {
+						"text": "\"Quality: \" & floor(SwordParameters.Quality)"
+					}
+				}
+			],
+			"sid": 233114345516292
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 132307965199693,
+					"parameters": {
+						"object": "ContinueButton"
+					}
+				},
+				{
+					"id": "is-playing-by-tags",
+					"objectClass": "TimelineController",
+					"sid": 611904560785286,
+					"parameters": {
+						"tags": "\"results\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 357807000567566,
+					"parameters": {
+						"layout": "Design Layout"
+					}
+				}
+			],
+			"sid": 783926473469486
+		}
+	],
+	"sid": 474676344872142
+}

@@ -14,6 +14,10 @@
 			"includeSheet": "Whetstone Events"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "Results Events"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -23,6 +27,16 @@
 					"behaviorType": "Timer",
 					"parameters": {
 						"tag": "\"Move Camera\""
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Camera",
+					"sid": 883664271993224,
+					"parameters": {
+						"instance-variable": "SceneCounter",
+						"comparison": 2,
+						"value": "3"
 					}
 				}
 			],
@@ -34,6 +48,15 @@
 					"parameters": {
 						"timeline": "Camera Move",
 						"tags": "\"camera\""
+					}
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "Camera",
+					"sid": 671920120840594,
+					"parameters": {
+						"instance-variable": "SceneCounter",
+						"value": "1"
 					}
 				}
 			],
@@ -62,7 +85,8 @@
 					}
 				}
 			],
-			"sid": 787454670772048
+			"sid": 787454670772048,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -100,7 +124,6 @@
 					"id": "start-timer",
 					"objectClass": "Camera",
 					"sid": 801782062283273,
-					"disabled": true,
 					"behaviorType": "Timer",
 					"parameters": {
 						"duration": "Camera.SceneLength",
