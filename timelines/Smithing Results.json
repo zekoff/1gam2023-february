@@ -6,7 +6,7 @@
 	"ease": "easeoutcubic",
 	"pathMode": "line",
 	"resizeMode": "size",
-	"playheadTime": 1,
+	"playheadTime": 0,
 	"totalTime": 5,
 	"stepTime": 0.1,
 	"useStepTime": true,
@@ -36,7 +36,7 @@
 			"initialVisibility": true,
 			"id": "",
 			"virtualPosition": {
-				"offsetOpacity": 1,
+				"offsetOpacity": 2,
 				"useColor": true,
 				"colorSet": false,
 				"relativeFlags": 2039
@@ -322,7 +322,7 @@
 			"initialVisibility": true,
 			"id": "",
 			"virtualPosition": {
-				"offsetX": -7.032798744049357,
+				"offsetX": -50,
 				"offsetOpacity": 0,
 				"useColor": true,
 				"colorSet": false,
@@ -686,7 +686,7 @@
 			"initialVisibility": true,
 			"id": "",
 			"virtualPosition": {
-				"offsetX": -35.2738698275949,
+				"offsetX": 0,
 				"offsetOpacity": 0,
 				"useColor": true,
 				"colorSet": false,

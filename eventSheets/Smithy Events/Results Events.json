@@ -76,6 +76,18 @@
 					"parameters": {
 						"text": "SwordParameters.ImageCharacter"
 					}
+				},
+				{
+					"type": "script",
+					"script": "const params = runtime.objects.SwordParameters.getFirstInstance();\nparams.instVars.Name = SwordDesigner.getSwordName(params.instVars.Material, params.instVars.Style);"
+				},
+				{
+					"id": "set-text",
+					"objectClass": "NameLabel",
+					"sid": 770080069614090,
+					"parameters": {
+						"text": "SwordParameters.Name"
+					}
 				}
 			],
 			"sid": 233114345516292

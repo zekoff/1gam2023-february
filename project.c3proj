@@ -205,8 +205,9 @@
 							"DurResults",
 							"QualityResults",
 							"ContinueButton",
-							"Text",
-							"SwordFont"
+							"ContinueLabel",
+							"SwordFont",
+							"NameLabel"
 						],
 						"subfolders": [],
 						"name": "Results"

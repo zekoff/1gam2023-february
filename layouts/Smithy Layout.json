@@ -1151,8 +1151,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 3498,
-						"y": 833,
+						"x": 3503,
+						"y": 806,
 						"width": 365,
 						"height": 146,
 						"originX": 0.5,
@@ -1180,8 +1180,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 3494,
-						"y": 1100,
+						"x": 3499,
+						"y": 1127,
 						"width": 247,
 						"height": 127,
 						"originX": 0.4979757085020243,
@@ -1197,7 +1197,7 @@
 					}
 				},
 				{
-					"type": "Text",
+					"type": "ContinueLabel",
 					"properties": {
 						"text": "CONTINUE",
 						"enable-bbcode": true,
@@ -1223,8 +1223,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 3428,
-						"y": 1084,
+						"x": 3433,
+						"y": 1111,
 						"width": 200,
 						"height": 30,
 						"originX": 0,
@@ -1268,6 +1268,49 @@
 						"height": 296,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "NameLabel",
+					"properties": {
+						"text": "SWORD NAME",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 24,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 63,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3505,
+						"y": 965,
+						"width": 413,
+						"height": 171,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1617,7 +1660,10 @@
 				"SPD": 0,
 				"DUR": 0,
 				"Quality": 100,
-				"ImageCharacter": "A"
+				"ImageCharacter": "A",
+				"Name": "",
+				"Material": "Unknown",
+				"Style": "Blade"
 			}
 		}
 	],

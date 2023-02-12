@@ -38,6 +38,27 @@
 			"desc": "",
 			"show": true,
 			"sid": 950966445372822
+		},
+		{
+			"name": "Name",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 996158200765471
+		},
+		{
+			"name": "Material",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 771572534472964
+		},
+		{
+			"name": "Style",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 207985063581257
 		}
 	]
 }

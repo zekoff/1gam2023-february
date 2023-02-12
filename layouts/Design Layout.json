@@ -534,7 +534,7 @@
 				{
 					"type": "WeaponAttributes",
 					"properties": {
-						"text": "Text",
+						"text": "Select Design Materials...",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 24,
@@ -560,7 +560,7 @@
 					"world": {
 						"x": 64,
 						"y": 64,
-						"width": 352,
+						"width": 416,
 						"height": 192,
 						"originX": 0,
 						"originY": 0,

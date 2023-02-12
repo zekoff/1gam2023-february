@@ -752,9 +752,27 @@
 							}
 						},
 						{
+							"id": "set-instvar-value",
+							"objectClass": "SwordParameters",
+							"sid": 487083927313444,
+							"parameters": {
+								"instance-variable": "Material",
+								"value": "DesignController.BladeType"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "SwordParameters",
+							"sid": 871728518677007,
+							"parameters": {
+								"instance-variable": "Style",
+								"value": "DesignController.StyleType"
+							}
+						},
+						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 656662193793694,
+							"sid": 109451593216519,
 							"parameters": {
 								"layout": "Smithy Layout"
 							}
