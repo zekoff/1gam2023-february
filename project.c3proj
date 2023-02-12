@@ -263,7 +263,32 @@
 	},
 	"rootFileFolders": {
 		"script": {
-			"items": [],
+			"items": [
+				{
+					"name": "main.js",
+					"type": "application/javascript",
+					"sid": 982036290267358,
+					"script-info": {
+						"purpose": "main"
+					}
+				},
+				{
+					"name": "SwordDesigner.js",
+					"type": "application/javascript",
+					"sid": 442278088334787,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "importsForEvents.js",
+					"type": "application/javascript",
+					"sid": 392956316500658,
+					"script-info": {
+						"purpose": "imports-for-events"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"sound": {
@@ -435,7 +460,7 @@
 		"preloadSounds": true,
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
-		"autoReloadScriptsOnPreview": false,
+		"autoReloadScriptsOnPreview": true,
 		"exportFileStructure": "folders"
 	},
 	"viewportWidth": 720,

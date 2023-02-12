@@ -510,7 +510,7 @@
 				},
 				{
 					"type": "script",
-					"script": "const dc = runtime.objects.DesignController.getFirstInstance();\nlet dmgTotal = 0;\nlet spdTotal = 0;\nlet durTotal = 0;\nif (dc.instVars.BladeType) {\n\tconst bladeTypeData = runtime.objects.BladeTypes.getFirstInstance();\n\tconst bladeIndex = dc.instVars.BladeIndex;\n\tdmgTotal += bladeTypeData.getAt(1, bladeIndex);\n\tspdTotal += bladeTypeData.getAt(2, bladeIndex);\n\tdurTotal += bladeTypeData.getAt(3, bladeIndex);\n}\nif (dc.instVars.HiltType) {\n\tconst hiltTypeData = runtime.objects.HiltTypes.getFirstInstance();\n\tconst hiltIndex = dc.instVars.HiltIndex;\n\tdmgTotal += hiltTypeData.getAt(1, hiltIndex);\n\tspdTotal += hiltTypeData.getAt(2, hiltIndex);\n\tdurTotal += hiltTypeData.getAt(3, hiltIndex);\n}\nif (dc.instVars.StyleType) {\n\tconst styleTypeData = runtime.objects.StyleTypes.getFirstInstance();\n\tconst styleIndex = dc.instVars.StyleIndex;\n\tdmgTotal += styleTypeData.getAt(1, styleIndex);\n\tspdTotal += styleTypeData.getAt(2, styleIndex);\n\tdurTotal += styleTypeData.getAt(3, styleIndex);\n}\ndc.instVars.DMG = dmgTotal;\ndc.instVars.SPD = spdTotal;\ndc.instVars.DUR = durTotal;\nconst attributeArray = [];\nattributeArray.push(`[b]DMG[/b]: ${dmgTotal}`);\nattributeArray.push(`[b]SPD[/b]: ${spdTotal}`);\nattributeArray.push(`[b]DUR[/b]: ${durTotal}`);\nattributeArray.push(`[b]Total Enhancement[/b]: ${dmgTotal + spdTotal + durTotal}`);\nruntime.objects.WeaponAttributes.getFirstInstance().text = attributeArray.join(\"\\n\");"
+					"script": "SwordDesigner.updateDesignParameters(runtime);"
 				}
 			],
 			"sid": 753129198106110,
