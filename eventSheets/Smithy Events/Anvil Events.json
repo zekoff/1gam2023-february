@@ -99,6 +99,15 @@
 							"parameters": [
 								"\"PERFECT\""
 							]
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "SwordParameters",
+							"sid": 400709607181378,
+							"parameters": {
+								"instance-variable": "Quality",
+								"value": "3 * (SwordParameters.DMG + 1)"
+							}
 						}
 					],
 					"sid": 669676411520992
@@ -121,6 +130,15 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "SwordParameters",
+							"sid": 790673660026757,
+							"parameters": {
+								"instance-variable": "Quality",
+								"value": "2 * (SwordParameters.DMG + 1)"
+							}
+						},
 						{
 							"callFunction": "StrikeSuccess",
 							"sid": 270807379497986,
@@ -149,6 +167,15 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "SwordParameters",
+							"sid": 454318702283227,
+							"parameters": {
+								"instance-variable": "Quality",
+								"value": "1 * (SwordParameters.DMG + 1)"
+							}
+						},
 						{
 							"callFunction": "StrikeSuccess",
 							"sid": 441068269368994,
@@ -288,6 +315,15 @@
 			"eventType": "function-block",
 			"conditions": [],
 			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "SwordParameters",
+					"sid": 930396516782682,
+					"parameters": {
+						"instance-variable": "Quality",
+						"value": "5 * (SwordParameters.DMG + 1)"
+					}
+				},
 				{
 					"id": "destroy",
 					"objectClass": "BadMark",

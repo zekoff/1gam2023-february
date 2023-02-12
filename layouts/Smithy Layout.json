@@ -816,41 +816,7 @@
 						"angle": 5.280444306431907,
 						"zElevation": 0
 					}
-				}
-			],
-			"sid": 266252830467454,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"isInitiallyInteractive": true,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				1,
-				1,
-				1,
-				1
-			],
-			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": true,
-			"renderingMode": "3d",
-			"drawOrder": "z-order",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
-		},
-		{
-			"name": "UI",
-			"overriden": 0,
-			"subLayers": [],
-			"instances": [
+				},
 				{
 					"type": "AnvilSparks",
 					"properties": {
@@ -897,35 +863,38 @@
 					}
 				},
 				{
-					"type": "Camera",
+					"type": "TempText",
 					"properties": {
+						"text": "Temp Text",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 36,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
 						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
+						"origin": "top-left",
+						"read-aloud": false
 					},
-					"uid": 14,
-					"instanceVariables": {
-						"SceneLength": 10
-					},
-					"behaviors": {
-						"ScrollTo": {
-							"properties": {
-								"enabled": true
-							}
-						},
-						"Timer": {
-							"properties": {}
-						}
-					},
+					"uid": 20,
+					"instanceVariables": {},
+					"behaviors": {},
 					"world": {
-						"x": 500,
-						"y": 640,
-						"width": 232,
-						"height": 109,
-						"originX": 0.46551724137931033,
-						"originY": 0.5137614678899083,
+						"x": 472,
+						"y": 170,
+						"width": 374,
+						"height": 103,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -982,16 +951,90 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				}
+			],
+			"sid": 266252830467454,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": true,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "UI",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "Camera",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 14,
+					"instanceVariables": {
+						"SceneLength": 10
+					},
+					"behaviors": {
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 500,
+						"y": 640,
+						"width": 232,
+						"height": 109,
+						"originX": 0.46551724137931033,
+						"originY": 0.5137614678899083,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				},
 				{
-					"type": "TempText",
+					"type": "QualityText",
 					"properties": {
-						"text": "Temp Text",
+						"text": "Quality",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 36,
 						"line-height": 0,
-						"bold": false,
+						"bold": true,
 						"italic": false,
 						"color": [
 							0,
@@ -999,23 +1042,23 @@
 							0,
 							1
 						],
-						"horizontal-alignment": "left",
+						"horizontal-alignment": "center",
 						"vertical-alignment": "top",
 						"wrapping": "word",
 						"initially-visible": true,
-						"origin": "top-left",
+						"origin": "center",
 						"read-aloud": false
 					},
-					"uid": 20,
+					"uid": 44,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 472,
-						"y": 170,
-						"width": 374,
-						"height": 103,
-						"originX": 0,
-						"originY": 0,
+						"x": 360,
+						"y": 67,
+						"width": 387,
+						"height": 76,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1044,8 +1087,8 @@
 				1
 			],
 			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
+			"parallaxX": 0,
+			"parallaxY": 0,
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
@@ -1237,6 +1280,17 @@
 			},
 			"uid": 39,
 			"instanceVariables": {}
+		},
+		{
+			"type": "SwordParameters",
+			"properties": {},
+			"uid": 36,
+			"instanceVariables": {
+				"DMG": 0,
+				"SPD": 0,
+				"DUR": 0,
+				"Quality": 100
+			}
 		}
 	],
 	"effectTypes": [],

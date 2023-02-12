@@ -37,7 +37,7 @@ export function updateDesignParameters(runtime) {
 	attributeArray.push(`[b]DMG[/b]: ${dmgTotal}`);
 	attributeArray.push(`[b]SPD[/b]: ${spdTotal}`);
 	attributeArray.push(`[b]DUR[/b]: ${durTotal}`);
-	attributeArray.push(`[b]Total Enhancement[/b]: ${dmgTotal + spdTotal + durTotal}`);
+// 	attributeArray.push(`[b]Total Enhancement[/b]: ${dmgTotal + spdTotal + durTotal}`);
 	runtime.objects.WeaponAttributes.getFirstInstance().text = attributeArray.join("\n");
 }
 

@@ -188,11 +188,11 @@
 			"actions": [
 				{
 					"id": "add-to-instvar",
-					"objectClass": "TempCaret",
-					"sid": 440822104476644,
+					"objectClass": "SwordParameters",
+					"sid": 190284190033606,
 					"parameters": {
-						"instance-variable": "Temp",
-						"value": "100 * dt"
+						"instance-variable": "Quality",
+						"value": "(SwordParameters.DUR + 1) * dt"
 					}
 				}
 			],
@@ -217,7 +217,8 @@
 					}
 				}
 			],
-			"sid": 251300680363335
+			"sid": 251300680363335,
+			"disabled": true
 		}
 	],
 	"sid": 374245902003053

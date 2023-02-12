@@ -200,10 +200,10 @@
 				{
 					"id": "add-to-instvar",
 					"objectClass": "Blade",
-					"sid": 189329664605849,
+					"sid": 822139914099463,
 					"parameters": {
 						"instance-variable": "Sharpness",
-						"value": "100 * dt * WhetstoneStone.Rotate.Speed / 360"
+						"value": "25 * dt * WhetstoneStone.Rotate.Speed / 360"
 					}
 				},
 				{

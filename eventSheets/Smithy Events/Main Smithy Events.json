@@ -120,6 +120,27 @@
 				}
 			],
 			"sid": 379525292192183
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 189033649621105
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "QualityText",
+					"sid": 863747280749231,
+					"parameters": {
+						"text": "\"[b]Quality: [/b]\" & floor(SwordParameters.Quality)"
+					}
+				}
+			],
+			"sid": 152137242603607
 		}
 	],
 	"sid": 164790900203894

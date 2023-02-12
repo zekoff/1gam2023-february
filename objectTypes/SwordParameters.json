@@ -1,0 +1,36 @@
+{
+	"name": "SwordParameters",
+	"plugin-id": "Dictionary",
+	"sid": 957331147169001,
+	"isGlobal": true,
+	"instanceVariables": [
+		{
+			"name": "DMG",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 574252099004831
+		},
+		{
+			"name": "SPD",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 322854884540854
+		},
+		{
+			"name": "DUR",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 627612343029559
+		},
+		{
+			"name": "Quality",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 844594381490263
+		}
+	]
+}

@@ -47,7 +47,7 @@
 				{
 					"id": "on-completed",
 					"objectClass": "AJAX",
-					"sid": 541055732860238,
+					"sid": 791398559709874,
 					"parameters": {
 						"tag": "\"BladeTypes\""
 					}
@@ -57,13 +57,13 @@
 				{
 					"id": "load",
 					"objectClass": "BladeTypes",
-					"sid": 297883064061025,
+					"sid": 136698259010570,
 					"parameters": {
 						"json": "AJAX.LastData"
 					}
 				}
 			],
-			"sid": 621630582550141,
+			"sid": 791924100644766,
 			"children": [
 				{
 					"eventType": "variable",
@@ -73,7 +73,7 @@
 					"comment": "",
 					"isStatic": false,
 					"isConstant": false,
-					"sid": 454328134908426
+					"sid": 334648441684400
 				},
 				{
 					"eventType": "variable",
@@ -83,7 +83,7 @@
 					"comment": "",
 					"isStatic": false,
 					"isConstant": false,
-					"sid": 881729714644844
+					"sid": 628766391259189
 				},
 				{
 					"eventType": "script",
@@ -95,7 +95,7 @@
 						{
 							"id": "for-each",
 							"objectClass": "System",
-							"sid": 558031381506111,
+							"sid": 186931304572819,
 							"parameters": {
 								"object": "BladeButtons"
 							}
@@ -105,7 +105,7 @@
 						{
 							"id": "set-animation",
 							"objectClass": "BladeButtons",
-							"sid": 838801762668308,
+							"sid": 378235892391379,
 							"parameters": {
 								"animation": "BladeTypes.At(0, tokenat(pickedItems, index, \"|\"))",
 								"from": "beginning"
@@ -114,7 +114,7 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "BladeButtons",
-							"sid": 431518600961225,
+							"sid": 281370714565164,
 							"parameters": {
 								"instance-variable": "DataIndex",
 								"value": "tokenat(pickedItems, index, \"|\")"
@@ -123,14 +123,14 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 427756983399658,
+							"sid": 508107227291137,
 							"parameters": {
 								"variable": "index",
 								"value": "index + 1"
 							}
 						}
 					],
-					"sid": 430482255085098
+					"sid": 400103988265893
 				}
 			]
 		},
@@ -716,9 +716,45 @@
 					],
 					"actions": [
 						{
+							"id": "set-instvar-value",
+							"objectClass": "SwordParameters",
+							"sid": 240634665558022,
+							"parameters": {
+								"instance-variable": "DMG",
+								"value": "DesignController.DMG"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "SwordParameters",
+							"sid": 256613557806973,
+							"parameters": {
+								"instance-variable": "SPD",
+								"value": "DesignController.SPD"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "SwordParameters",
+							"sid": 749429783009905,
+							"parameters": {
+								"instance-variable": "DUR",
+								"value": "DesignController.DUR"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "SwordParameters",
+							"sid": 940952205090122,
+							"parameters": {
+								"instance-variable": "Quality",
+								"value": "100"
+							}
+						},
+						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 498551924365454,
+							"sid": 656662193793694,
 							"parameters": {
 								"layout": "Smithy Layout"
 							}
