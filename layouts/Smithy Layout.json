@@ -1219,12 +1219,6 @@
 			"instanceVariables": {}
 		},
 		{
-			"type": "Dictionary",
-			"properties": {},
-			"uid": 36,
-			"instanceVariables": {}
-		},
-		{
 			"type": "HiltTypes",
 			"properties": {
 				"width": 10,

@@ -3,8 +3,6 @@
 
 /**
 Update DMG, SPD, and DUR parameters from the selected design elements.
-
-dc: DesignController instance, passed from event
 */
 export function updateDesignParameters(runtime) {
 	const dc = runtime.objects.DesignController.getFirstInstance();
@@ -41,4 +39,21 @@ export function updateDesignParameters(runtime) {
 	attributeArray.push(`[b]DUR[/b]: ${durTotal}`);
 	attributeArray.push(`[b]Total Enhancement[/b]: ${dmgTotal + spdTotal + durTotal}`);
 	runtime.objects.WeaponAttributes.getFirstInstance().text = attributeArray.join("\n");
+}
+
+/**
+ * Given a string containing items to pick packed with a separator, return another
+ * string packed with results picked from the bag.
+ */
+export function pickFromBag(bagString, num, separator="|") {
+	if (!num) return "";
+	const bagArray = bagString.split("|");
+	if (bagArray.length <= num) return bagString;
+	const resultArray = [];
+	for (let i = 0; i < num; i++) {
+		const bagIndex = Math.floor(Math.random() * bagArray.length);
+		resultArray.push(bagArray.at(bagIndex));
+		bagArray.splice(bagIndex, 1);
+	}
+	return resultArray.join(separator);
 }

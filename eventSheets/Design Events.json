@@ -67,6 +67,16 @@
 			"children": [
 				{
 					"eventType": "variable",
+					"name": "pickedItems",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 454328134908426
+				},
+				{
+					"eventType": "variable",
 					"name": "index",
 					"type": "number",
 					"initialValue": "0",
@@ -74,6 +84,10 @@
 					"isStatic": false,
 					"isConstant": false,
 					"sid": 881729714644844
+				},
+				{
+					"eventType": "script",
+					"script": "localVars.pickedItems = SwordDesigner.pickFromBag(\"1|2|3|4|5|6|7|8|9\", 3);"
 				},
 				{
 					"eventType": "block",
@@ -89,30 +103,30 @@
 					],
 					"actions": [
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 720586550133785,
-							"parameters": {
-								"variable": "index",
-								"value": "floor(random(6)+1)"
-							}
-						},
-						{
 							"id": "set-animation",
 							"objectClass": "BladeButtons",
-							"sid": 191910817555357,
+							"sid": 838801762668308,
 							"parameters": {
-								"animation": "BladeTypes.At(0, index)",
+								"animation": "BladeTypes.At(0, tokenat(pickedItems, index, \"|\"))",
 								"from": "beginning"
 							}
 						},
 						{
 							"id": "set-instvar-value",
 							"objectClass": "BladeButtons",
-							"sid": 792309634881947,
+							"sid": 431518600961225,
 							"parameters": {
 								"instance-variable": "DataIndex",
-								"value": "index"
+								"value": "tokenat(pickedItems, index, \"|\")"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 427756983399658,
+							"parameters": {
+								"variable": "index",
+								"value": "index + 1"
 							}
 						}
 					],
@@ -146,13 +160,27 @@
 			"children": [
 				{
 					"eventType": "variable",
+					"name": "pickedItems",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 900369366005219
+				},
+				{
+					"eventType": "variable",
 					"name": "index",
 					"type": "number",
 					"initialValue": "0",
 					"comment": "",
 					"isStatic": false,
 					"isConstant": false,
-					"sid": 367486142381693
+					"sid": 570390105334409
+				},
+				{
+					"eventType": "script",
+					"script": "localVars.pickedItems = SwordDesigner.pickFromBag(\"1|2|3|4|5|6\", 3);"
 				},
 				{
 					"eventType": "block",
@@ -168,30 +196,30 @@
 					],
 					"actions": [
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 574420164998521,
-							"parameters": {
-								"variable": "index",
-								"value": "floor(random(6)+1)"
-							}
-						},
-						{
 							"id": "set-animation",
 							"objectClass": "HiltButtons",
-							"sid": 748153215206880,
+							"sid": 264608498499940,
 							"parameters": {
-								"animation": "HiltTypes.At(0, index)",
+								"animation": "HiltTypes.At(0, tokenat(pickedItems, index, \"|\"))",
 								"from": "beginning"
 							}
 						},
 						{
 							"id": "set-instvar-value",
 							"objectClass": "HiltButtons",
-							"sid": 318541044727897,
+							"sid": 748531482388610,
 							"parameters": {
 								"instance-variable": "DataIndex",
-								"value": "index"
+								"value": "tokenat(pickedItems, index, \"|\")"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 200690748627236,
+							"parameters": {
+								"variable": "index",
+								"value": "index +1"
 							}
 						}
 					],
@@ -225,6 +253,16 @@
 			"children": [
 				{
 					"eventType": "variable",
+					"name": "pickedItems",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 992777824104255
+				},
+				{
+					"eventType": "variable",
 					"name": "index",
 					"type": "number",
 					"initialValue": "0",
@@ -232,6 +270,10 @@
 					"isStatic": false,
 					"isConstant": false,
 					"sid": 403575525738199
+				},
+				{
+					"eventType": "script",
+					"script": "localVars.pickedItems = SwordDesigner.pickFromBag(\"1|2|3|4|5|6\", 3);"
 				},
 				{
 					"eventType": "block",
@@ -247,30 +289,30 @@
 					],
 					"actions": [
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 762721873828482,
-							"parameters": {
-								"variable": "index",
-								"value": "floor(random(6)+1)"
-							}
-						},
-						{
 							"id": "set-animation",
 							"objectClass": "StyleButtons",
-							"sid": 332121661330170,
+							"sid": 325564713504831,
 							"parameters": {
-								"animation": "StyleTypes.At(0, index)",
+								"animation": "StyleTypes.At(0, tokenat(pickedItems, index, \"|\"))",
 								"from": "beginning"
 							}
 						},
 						{
 							"id": "set-instvar-value",
 							"objectClass": "StyleButtons",
-							"sid": 942709850137030,
+							"sid": 535034784186612,
 							"parameters": {
 								"instance-variable": "DataIndex",
-								"value": "index"
+								"value": "tokenat(pickedItems, index, \"|\")"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 500702618569582,
+							"parameters": {
+								"variable": "index",
+								"value": "index + 1"
 							}
 						}
 					],
@@ -510,7 +552,7 @@
 				},
 				{
 					"type": "script",
-					"script": "SwordDesigner.updateDesignParameters(runtime);"
+					"script": "SwordDesigner.updateDesignParameters(runtime);\n"
 				}
 			],
 			"sid": 753129198106110,
