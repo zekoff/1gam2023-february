@@ -33,10 +33,10 @@
 				{
 					"id": "set-speed",
 					"objectClass": "WhetstoneStone",
-					"sid": 868954591241364,
+					"sid": 323265411984239,
 					"behaviorType": "Rotate",
 					"parameters": {
-						"speed": "WhetstoneStone.Rotate.Speed + 720*dt"
+						"speed": "WhetstoneStone.Rotate.Speed + 1440*dt"
 					}
 				}
 			],
@@ -66,10 +66,10 @@
 				{
 					"id": "set-speed",
 					"objectClass": "WhetstoneStone",
-					"sid": 263305086212493,
+					"sid": 666275785044367,
 					"behaviorType": "Rotate",
 					"parameters": {
-						"speed": "WhetstoneStone.Rotate.Speed - 360 * dt"
+						"speed": "WhetstoneStone.Rotate.Speed - 720 * dt"
 					}
 				}
 			],
@@ -296,10 +296,10 @@
 						{
 							"id": "add-to-instvar",
 							"objectClass": "SwordParameters",
-							"sid": 655217041724327,
+							"sid": 111201041740678,
 							"parameters": {
 								"instance-variable": "Quality",
-								"value": "max((SwordParameters.SPD + 2), 1) * dt * Blade.AnimationFrame / 2"
+								"value": "max((SwordParameters.SPD + 2), 1) * dt * Blade.AnimationFrame / 1.5"
 							}
 						}
 					],

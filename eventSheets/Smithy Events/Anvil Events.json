@@ -260,23 +260,66 @@
 					}
 				}
 			],
-			"actions": [
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 118048026461314,
-					"parameters": {
-						"object-to-create": "StrikeItems",
-						"layer": "\"Interactive\"",
-						"x": "MarkSpawner.X",
-						"y": "MarkSpawner.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				}
-			],
+			"actions": [],
 			"sid": 232974544781025,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 149192796729236,
+							"parameters": {
+								"first-value": "random(100)",
+								"comparison": 3,
+								"second-value": "70"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 972815087314960,
+							"parameters": {
+								"object-to-create": "GoodMark",
+								"layer": "\"Interactive\"",
+								"x": "MarkSpawner.X",
+								"y": "MarkSpawner.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 240814436553400
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 939084476341661
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 405564007936246,
+							"parameters": {
+								"object-to-create": "BadMark",
+								"layer": "\"Interactive\"",
+								"x": "MarkSpawner.X",
+								"y": "MarkSpawner.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 505249644623354
+				},
 				{
 					"eventType": "block",
 					"conditions": [

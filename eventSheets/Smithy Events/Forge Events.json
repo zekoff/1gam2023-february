@@ -189,10 +189,10 @@
 				{
 					"id": "add-to-instvar",
 					"objectClass": "SwordParameters",
-					"sid": 226522176154944,
+					"sid": 162121021289567,
 					"parameters": {
 						"instance-variable": "Quality",
-						"value": "max((SwordParameters.DUR + 2), 1) * dt * 2"
+						"value": "max((SwordParameters.DUR + 2), 1) * dt * 3"
 					}
 				}
 			],
