@@ -46,72 +46,39 @@
 					}
 				},
 				{
-					"type": "ForgeButton",
+					"type": "TiledBackground",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0,
+						"enable-tile-randomization": false,
+						"x-random": 1,
+						"y-random": 1,
+						"angle-random": 1,
+						"blend-margin-x": 0.1,
+						"blend-margin-y": 0.1
 					},
-					"uid": 53,
+					"uid": 66,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 360,
-						"y": 1152,
-						"width": 448,
-						"height": 160,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": -64,
+						"y": -64,
+						"width": 832,
+						"height": 1408,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
 							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "ForgeLabel",
-					"properties": {
-						"text": "FORGE",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 31.059301757812506,
-						"line-height": 0,
-						"bold": true,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": false,
-						"origin": "center",
-						"read-aloud": false
-					},
-					"uid": 55,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 360,
-						"y": 1152,
-						"width": 288,
-						"height": 96,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
+							0.3
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -356,6 +323,78 @@
 						"y": 704,
 						"width": 64,
 						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ForgeButton",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 53,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 360,
+						"y": 1152,
+						"width": 448,
+						"height": 160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ForgeLabel",
+					"properties": {
+						"text": "FORGE",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 31.059301757812506,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 55,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 360,
+						"y": 1152,
+						"width": 288,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

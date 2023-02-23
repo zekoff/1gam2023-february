@@ -1,0 +1,20 @@
+{
+	"name": "MountainBackground",
+	"plugin-id": "TiledBg",
+	"sid": 907097603825475,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 384,
+		"height": 216,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 9814608,
+		"useCollisionPoly": true
+	}
+}
