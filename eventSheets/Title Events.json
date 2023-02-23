@@ -1,0 +1,55 @@
+{
+	"name": "Title Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 254843615710819
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 897600939369055,
+					"parameters": {
+						"audio-file": "FebSong",
+						"loop": "looping",
+						"volume": "-20",
+						"stereo-pan": "0",
+						"tag-optional": "\"music\""
+					}
+				}
+			],
+			"sid": 356467702146016
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 275738190519855,
+					"parameters": {
+						"object": "StartButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 908244523171236,
+					"parameters": {
+						"layout": "Design Layout"
+					}
+				}
+			],
+			"sid": 587078487616067
+		}
+	],
+	"sid": 893256338039247
+}

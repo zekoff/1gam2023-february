@@ -56,7 +56,7 @@
 						"image-offset-y": 0,
 						"image-scale-x": 1,
 						"image-scale-y": 1,
-						"image-angle": 0,
+						"image-angle": 350,
 						"enable-tile-randomization": false,
 						"x-random": 1,
 						"y-random": 1,
