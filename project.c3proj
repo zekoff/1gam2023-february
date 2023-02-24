@@ -151,7 +151,8 @@
 			"SwordParameters",
 			"MountainBackground",
 			"TiledBackground",
-			"Audio"
+			"Audio",
+			"SwordFont"
 		],
 		"subfolders": [
 			{
@@ -223,7 +224,6 @@
 							"QualityResults",
 							"ContinueButton",
 							"ContinueLabel",
-							"SwordFont",
 							"NameLabel"
 						],
 						"subfolders": [],
@@ -334,7 +334,32 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "Strike.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 802050018018339,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Grind.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 106563488373892,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Puff.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 582961296741666,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {

@@ -72,10 +72,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 154,
-						"y": 727,
+						"x": 175,
+						"y": 1093,
 						"width": 409,
-						"height": 260,
+						"height": 105,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -128,6 +128,162 @@
 							1
 						],
 						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SwordFont",
+					"properties": {
+						"text": "A",
+						"enable-bbcode": true,
+						"character-width": 32,
+						"character-height": 32,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123",
+						"spacing-data": "",
+						"scale": 8,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 71,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 157,
+						"y": 412,
+						"width": 300,
+						"height": 296,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.47966238128956284,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SwordFont",
+					"properties": {
+						"text": "E",
+						"enable-bbcode": true,
+						"character-width": 32,
+						"character-height": 32,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123",
+						"spacing-data": "",
+						"scale": 8,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 72,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 549,
+						"y": 633,
+						"width": 300,
+						"height": 296,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.7010969971415655,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SwordFont",
+					"properties": {
+						"text": "F",
+						"enable-bbcode": true,
+						"character-width": 32,
+						"character-height": 32,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123",
+						"spacing-data": "",
+						"scale": 8,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 73,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 161,
+						"y": 95,
+						"width": 300,
+						"height": 296,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 5.626428129986371,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SwordFont",
+					"properties": {
+						"text": "B",
+						"enable-bbcode": true,
+						"character-width": 32,
+						"character-height": 32,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123",
+						"spacing-data": "",
+						"scale": 8,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 74,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 184,
+						"y": 833,
+						"width": 300,
+						"height": 296,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 1.049646905412077,
 						"zElevation": 0
 					}
 				}

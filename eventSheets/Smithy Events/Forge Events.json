@@ -37,7 +37,33 @@
 					}
 				}
 			],
-			"sid": 929065147981005
+			"sid": 929065147981005,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Audio",
+							"sid": 595523577350274,
+							"parameters": {
+								"tag": "\"puff\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 260233908009529,
+							"parameters": {
+								"tag": "\"puff\""
+							}
+						}
+					],
+					"sid": 751942846252961
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -69,7 +95,38 @@
 					}
 				}
 			],
-			"sid": 555859285242699
+			"sid": 555859285242699,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Audio",
+							"sid": 140650080527982,
+							"parameters": {
+								"tag": "\"puff\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 540525687791845,
+							"parameters": {
+								"audio-file": "Puff",
+								"loop": "looping",
+								"volume": "-5",
+								"stereo-pan": "0",
+								"tag-optional": "\"puff\""
+							}
+						}
+					],
+					"sid": 225695705396316
+				}
+			]
 		},
 		{
 			"eventType": "block",

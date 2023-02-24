@@ -223,7 +223,38 @@
 					}
 				}
 			],
-			"sid": 468506991064863
+			"sid": 468506991064863,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Audio",
+							"sid": 949634389404949,
+							"parameters": {
+								"tag": "\"grind\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 741778344379648,
+							"parameters": {
+								"audio-file": "Grind",
+								"loop": "looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"grind\""
+							}
+						}
+					],
+					"sid": 760914502917736
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -248,7 +279,33 @@
 					}
 				}
 			],
-			"sid": 560897998075881
+			"sid": 560897998075881,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Audio",
+							"sid": 334815411051285,
+							"parameters": {
+								"tag": "\"grind\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 752873383623879,
+							"parameters": {
+								"tag": "\"grind\""
+							}
+						}
+					],
+					"sid": 178204821841800
+				}
+			]
 		},
 		{
 			"eventType": "block",

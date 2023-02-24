@@ -14,11 +14,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 897600939369055,
+					"sid": 517524009708144,
 					"parameters": {
 						"audio-file": "FebSong",
 						"loop": "looping",
-						"volume": "-20",
+						"volume": "0",
 						"stereo-pan": "0",
 						"tag-optional": "\"music\""
 					}
