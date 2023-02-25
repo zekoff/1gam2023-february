@@ -43,6 +43,20 @@
 		},
 		{
 			"type": "plugin",
+			"id": "LocalStorage",
+			"name": "Local storage",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Particles",
 			"name": "Particles",
 			"author": "Scirra",
@@ -152,7 +166,10 @@
 			"MountainBackground",
 			"TiledBackground",
 			"Audio",
-			"SwordFont"
+			"SwordFont",
+			"LocalStorage",
+			"FavoritesSwordsArray",
+			"ExitButton"
 		],
 		"subfolders": [
 			{
@@ -224,7 +241,8 @@
 							"QualityResults",
 							"ContinueButton",
 							"ContinueLabel",
-							"NameLabel"
+							"NameLabel",
+							"FavoriteButton"
 						],
 						"subfolders": [],
 						"name": "Results"
@@ -252,10 +270,24 @@
 			},
 			{
 				"items": [
-					"StartButton"
+					"StartButton",
+					"FavoritesButton"
 				],
 				"subfolders": [],
 				"name": "Title Objects"
+			},
+			{
+				"items": [
+					"FavoritesHeader",
+					"FavoriteName",
+					"FavoriteDmg",
+					"FavoriteSpd",
+					"FavoriteDur",
+					"FavoriteQuality",
+					"FavoriteBox"
+				],
+				"subfolders": [],
+				"name": "Favorites Objects"
 			}
 		]
 	},
@@ -268,6 +300,17 @@
 				"WhetstoneSupport"
 			],
 			"selectMode": "wrap"
+		},
+		{
+			"members": [
+				"FavoriteBox",
+				"FavoriteDmg",
+				"FavoriteDur",
+				"FavoriteName",
+				"FavoriteQuality",
+				"FavoriteSpd"
+			],
+			"selectMode": "all"
 		}
 	],
 	"families": {
@@ -280,14 +323,16 @@
 		"items": [
 			"Smithy Layout",
 			"Design Layout",
-			"Title Layout"
+			"Title Layout",
+			"Favorites Layout"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
 			"Design Events",
-			"Title Events"
+			"Title Events",
+			"Favorites Events"
 		],
 		"subfolders": [
 			{

@@ -1433,6 +1433,35 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "FavoriteButton",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 77,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 3797,
+						"y": 1142,
+						"width": 155.17783346857243,
+						"height": 153.81062788735153,
+						"originX": 0.4713656387665198,
+						"originY": 0.5422222222222223,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 266252830467454,
@@ -1778,6 +1807,16 @@
 				"Material": "Unknown",
 				"Style": "Blade"
 			}
+		},
+		{
+			"type": "FavoritesSwordsArray",
+			"properties": {
+				"width": 0,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 76,
+			"instanceVariables": {}
 		}
 	],
 	"effectTypes": [],

@@ -1,0 +1,340 @@
+{
+	"name": "Favorites Events",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "iterIndex",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 292252964397688
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 773394221979047,
+					"parameters": {
+						"object": "ExitButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 542860183838834,
+					"parameters": {
+						"layout": "Title Layout"
+					}
+				}
+			],
+			"sid": 493855967319421
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 419636056631789
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 767459188369373,
+					"parameters": {
+						"variable": "iterIndex",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 835440136569224,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each-element",
+							"objectClass": "FavoritesSwordsArray",
+							"sid": 732459776432750,
+							"parameters": {
+								"axes": "x"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 266080460261488,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 549775729285373,
+									"parameters": {
+										"object-to-create": "FavoriteBox",
+										"layer": "\"Main\"",
+										"x": "30",
+										"y": "170 + (210 * iterIndex)",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								}
+							],
+							"sid": 504532897960694,
+							"children": [
+								{
+									"eventType": "variable",
+									"name": "ImageChar",
+									"type": "string",
+									"initialValue": "",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 286367159122708
+								},
+								{
+									"eventType": "variable",
+									"name": "Quality",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 760294944903617
+								},
+								{
+									"eventType": "variable",
+									"name": "DUR",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 192199082633712
+								},
+								{
+									"eventType": "variable",
+									"name": "SPD",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 725408818002553
+								},
+								{
+									"eventType": "variable",
+									"name": "DMG",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 439135054257031
+								},
+								{
+									"eventType": "variable",
+									"name": "Name",
+									"type": "string",
+									"initialValue": "EMPTY",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 201008805319347
+								},
+								{
+									"eventType": "script",
+									"script": "let details = runtime.objects.FavoritesSwordsArray.getFirstInstance().getAt(runtime.globalVars.iterIndex);\nlocalVars.Name = details;\ndetails = JSON.parse(details);\nlocalVars.Name = details.name;\nlocalVars.DMG = details.dmg;\nlocalVars.SPD = details.spd;\nlocalVars.DUR = details.dur;\nlocalVars.Quality = details.quality;\nlocalVars.ImageChar = details.imageChar;"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-last-created",
+											"objectClass": "System",
+											"sid": 501914985071600,
+											"parameters": {
+												"object": "FavoriteBox"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "FavoriteName",
+											"sid": 725062733539978,
+											"parameters": {
+												"text": "Name"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "FavoriteName",
+											"sid": 848481182375097,
+											"parameters": {
+												"x": "FavoriteBox.X + 30",
+												"y": "FavoriteBox.Y + 15"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "FavoriteDmg",
+											"sid": 475296830579127,
+											"parameters": {
+												"text": "\"DMG: \" & DMG"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "FavoriteDmg",
+											"sid": 236221637403020,
+											"parameters": {
+												"x": "FavoriteBox.X + 60",
+												"y": "FavoriteBox.Y + 90"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "FavoriteSpd",
+											"sid": 636043301756093,
+											"parameters": {
+												"text": "\"SPD: \" & SPD"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "FavoriteSpd",
+											"sid": 423978253895952,
+											"parameters": {
+												"x": "FavoriteBox.X + 60",
+												"y": "FavoriteBox.Y + 115"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "FavoriteDur",
+											"sid": 207170840211277,
+											"parameters": {
+												"text": "\"DUR: \" & DUR"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "FavoriteDur",
+											"sid": 802161708194362,
+											"parameters": {
+												"x": "FavoriteBox.X + 60",
+												"y": "FavoriteBox.Y + 140"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "FavoriteQuality",
+											"sid": 113844639375732,
+											"parameters": {
+												"text": "\"Quality: \" & floor(Quality)"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "FavoriteQuality",
+											"sid": 104814295988981,
+											"parameters": {
+												"x": "FavoriteBox.X + 520",
+												"y": "FavoriteBox.Y + 150"
+											}
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 724139926401514,
+											"parameters": {
+												"object-to-create": "SwordFont",
+												"layer": "\"Main\"",
+												"x": "FavoriteBox.X + 600",
+												"y": "FavoriteBox.Y + 10",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										}
+									],
+									"sid": 993759996889736,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-last-created",
+													"objectClass": "System",
+													"sid": 764007985850587,
+													"parameters": {
+														"object": "SwordFont"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "SwordFont",
+													"sid": 827236009278299,
+													"parameters": {
+														"text": "ImageChar"
+													}
+												},
+												{
+													"id": "set-position",
+													"objectClass": "SwordFont",
+													"sid": 793844142794586,
+													"parameters": {
+														"x": "FavoriteBox.X + FavoriteBox.Width - 160",
+														"y": "FavoriteBox.Y + 30"
+													}
+												},
+												{
+													"id": "set-scale",
+													"objectClass": "SwordFont",
+													"sid": 729301069987865,
+													"parameters": {
+														"scale": "4"
+													}
+												}
+											],
+											"sid": 849956477822777
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 435068172542585,
+									"parameters": {
+										"variable": "iterIndex",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 873854456301591
+						}
+					]
+				}
+			]
+		}
+	],
+	"sid": 671188287370674
+}

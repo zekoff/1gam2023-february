@@ -12,19 +12,46 @@
 			],
 			"actions": [
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 517524009708144,
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 840453226542329,
 					"parameters": {
-						"audio-file": "FebSong",
-						"loop": "looping",
-						"volume": "0",
-						"stereo-pan": "0",
-						"tag-optional": "\"music\""
+						"key": "\"favorites\""
 					}
 				}
 			],
-			"sid": 356467702146016
+			"sid": 356467702146016,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Audio",
+							"sid": 527272155546873,
+							"parameters": {
+								"tag": "\"music\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 619772801754284,
+							"parameters": {
+								"audio-file": "FebSong",
+								"loop": "looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"music\""
+							}
+						}
+					],
+					"sid": 112745414001796
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -49,6 +76,86 @@
 				}
 			],
 			"sid": 587078487616067
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 832613259550479,
+					"parameters": {
+						"key": "\"favorites\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 381126249216629,
+					"parameters": {
+						"key": "\"favorites\""
+					}
+				}
+			],
+			"sid": 433374829593244
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 414198841464163,
+					"parameters": {
+						"key": "\"favorites\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "FavoritesSwordsArray",
+					"sid": 852985734413431,
+					"parameters": {
+						"json": "LocalStorage.ItemValue"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "FavoritesButton",
+					"sid": 166364184729403,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 855786826363993
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 663069487741927,
+					"parameters": {
+						"object": "FavoritesButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 409657620897367,
+					"parameters": {
+						"layout": "Favorites Layout"
+					}
+				}
+			],
+			"sid": 731707765450293
 		}
 	],
 	"sid": 893256338039247

@@ -124,6 +124,108 @@
 				}
 			],
 			"sid": 783926473469486
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 407400188303744,
+					"parameters": {
+						"object": "FavoriteButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "FavoriteButton",
+					"sid": 351795421532516,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 884566282733799,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "swordJson",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 856750631528381
+				},
+				{
+					"eventType": "script",
+					"script": "const params = runtime.objects.SwordParameters.getFirstInstance().instVars;\nconst favorite = {\n\tname: params.Name,\n\tdmg: params.DMG,\n\tspd: params.SPD,\n\tdur: params.DUR,\n\tquality: params.Quality,\n\timageChar: params.ImageCharacter\n};\nlocalVars.swordJson = JSON.stringify(favorite);"
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "push",
+							"objectClass": "FavoritesSwordsArray",
+							"sid": 238055886451762,
+							"parameters": {
+								"where": "back",
+								"value": "swordJson",
+								"axis": "x"
+							}
+						}
+					],
+					"sid": 146236529953769,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-size",
+									"objectClass": "FavoritesSwordsArray",
+									"sid": 917460207683439,
+									"parameters": {
+										"axis": "x",
+										"comparison": 4,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "pop",
+									"objectClass": "FavoritesSwordsArray",
+									"sid": 581536031287682,
+									"parameters": {
+										"where": "front",
+										"axis": "x"
+									}
+								}
+							],
+							"sid": 317978521079724
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 962742789323279,
+							"parameters": {
+								"key": "\"favorites\"",
+								"value": "FavoritesSwordsArray.AsJSON"
+							}
+						}
+					],
+					"sid": 467216400455410
+				}
+			]
 		}
 	],
 	"sid": 474676344872142
