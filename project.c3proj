@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 32702,
-	"name": "1gam2023-february",
+	"name": "Swordcraft",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -442,57 +442,17 @@
 		"icon": {
 			"items": [
 				{
-					"name": "icon-16.png",
+					"name": "maskable_icon.png",
 					"type": "image/png",
-					"sid": 901120779587740,
+					"sid": 347834753057078,
 					"icon-info": {
-						"purpose": "app-icon"
+						"purpose": "app-icon-maskable"
 					}
 				},
 				{
-					"name": "icon-32.png",
+					"name": "maskable_icon_dup.png",
 					"type": "image/png",
-					"sid": 216555815019643,
-					"icon-info": {
-						"purpose": "app-icon"
-					}
-				},
-				{
-					"name": "icon-64.png",
-					"type": "image/png",
-					"sid": 730314317624646,
-					"icon-info": {
-						"purpose": "app-icon"
-					}
-				},
-				{
-					"name": "icon-128.png",
-					"type": "image/png",
-					"sid": 958012841078817,
-					"icon-info": {
-						"purpose": "app-icon"
-					}
-				},
-				{
-					"name": "icon-256.png",
-					"type": "image/png",
-					"sid": 217047608302499,
-					"icon-info": {
-						"purpose": "app-icon"
-					}
-				},
-				{
-					"name": "icon-512.png",
-					"type": "image/png",
-					"sid": 615407779797029,
-					"icon-info": {
-						"purpose": "app-icon"
-					}
-				},
-				{
-					"name": "loading-logo.png",
-					"type": "image/png",
-					"sid": 814326403030816,
+					"sid": 932099197330659,
 					"icon-info": {
 						"purpose": "loading-logo"
 					}
@@ -544,12 +504,12 @@
 		]
 	},
 	"properties": {
-		"description": "",
+		"description": "A game about crafting swords. February's game from 1GAM2023.",
 		"version": "1.0.0.0",
 		"author": "Michael Zekoff",
 		"authorEmail": "zekoff@gmail.com",
 		"authorWebsite": "",
-		"appId": "",
+		"appId": "com.zekoff.1gam2023.february",
 		"pixelRounding": false,
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
@@ -589,7 +549,7 @@
 		"zNear": 1,
 		"zFar": 10000,
 		"maxSpriteSheetSize": 2048,
-		"loaderStyle": "splash",
+		"loaderStyle": "progress-logo",
 		"preloadSounds": true,
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
