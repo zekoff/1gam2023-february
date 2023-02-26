@@ -62,17 +62,19 @@ export function getSwordName(material, style) {
 	const prefixes = [
 		"Vorpal", "Punishing", "Deadly", "Lightning", "Icy", "Chilled", "Flaming",
 		"Keen", "Magic", "Argent", "Fervent", "Gripping", "Furious", "Sparkling", "Shadow",
-		"Lambent", "Fragile", "Final", "Vigorous", "Pure", "Fanciful"
+		"Lambent", "Fragile", "Final", "Vigorous", "Pure", "Fanciful", "Toxic", "Shimmering",
+		"Living", "Dark", "Flickering", "Unbreakable"
 	];
 	const suffixes = [
 		"the Moon", "the Sun", "Insanity", "Chaos", "the Highlands", "Fervor", "Fury",
 		"Ripping", "the Gladiator", "the Warrior", "the Cleric", "the Badlands", "the Lower Planes",
-		"the Clouds", "Rage", "Vengeance", "Protection"
+		"the Clouds", "Rage", "Vengeance", "Protection", "the Earth", "the Sea", "the Upper Planes",
+		"the Thief"
 	]
 	const nameComponents = []
-	if (Math.random() < 0.7) nameComponents.push(prefixes.at(Math.floor(prefixes.length * Math.random())));
-	if (Math.random() < 0.5) nameComponents.push(material);
+	if (Math.random() < 0.8) nameComponents.push(prefixes.at(Math.floor(prefixes.length * Math.random())));
+	nameComponents.push(material);
 	nameComponents.push(style);
-	if (Math.random() < 0.7) nameComponents.push("of " + suffixes.at(Math.floor(suffixes.length * Math.random())));
+	if (Math.random() < 0.6) nameComponents.push("of " + suffixes.at(Math.floor(suffixes.length * Math.random())));
 	return nameComponents.join(" ");
 }
