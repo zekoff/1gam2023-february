@@ -456,6 +456,14 @@
 					"icon-info": {
 						"purpose": "loading-logo"
 					}
+				},
+				{
+					"name": "maskable_icon2.png",
+					"type": "image/png",
+					"sid": 281338725468146,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
 				}
 			],
 			"subfolders": []
