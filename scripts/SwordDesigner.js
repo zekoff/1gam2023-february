@@ -75,6 +75,6 @@ export function getSwordName(material, style) {
 	if (Math.random() < 0.8) nameComponents.push(prefixes.at(Math.floor(prefixes.length * Math.random())));
 	nameComponents.push(material);
 	nameComponents.push(style);
-	if (Math.random() < 0.6) nameComponents.push("of " + suffixes.at(Math.floor(suffixes.length * Math.random())));
+	if (Math.random() < 0.7) nameComponents.push("of " + suffixes.at(Math.floor(suffixes.length * Math.random())));
 	return nameComponents.join(" ");
 }

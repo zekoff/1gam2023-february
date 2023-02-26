@@ -424,10 +424,10 @@
 				{
 					"id": "start-timer",
 					"objectClass": "LastStrikeText",
-					"sid": 105336789867863,
+					"sid": 646893129406440,
 					"behaviorType": "Timer",
 					"parameters": {
-						"duration": "1.0",
+						"duration": "0.3",
 						"type": "once",
 						"tag": "\"\""
 					}
