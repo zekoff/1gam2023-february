@@ -271,7 +271,8 @@
 			{
 				"items": [
 					"StartButton",
-					"FavoritesButton"
+					"FavoritesButton",
+					"HTPButton"
 				],
 				"subfolders": [],
 				"name": "Title Objects"
@@ -288,6 +289,14 @@
 				],
 				"subfolders": [],
 				"name": "Favorites Objects"
+			},
+			{
+				"items": [
+					"HTPLabel",
+					"HTPText"
+				],
+				"subfolders": [],
+				"name": "How-To-Play Objects"
 			}
 		]
 	},
@@ -324,7 +333,8 @@
 			"Smithy Layout",
 			"Design Layout",
 			"Title Layout",
-			"Favorites Layout"
+			"Favorites Layout",
+			"How-To-Play Layout"
 		],
 		"subfolders": []
 	},
@@ -332,7 +342,8 @@
 		"items": [
 			"Design Events",
 			"Title Events",
-			"Favorites Events"
+			"Favorites Events",
+			"How-To-Play Events"
 		],
 		"subfolders": [
 			{

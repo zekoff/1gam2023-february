@@ -156,6 +156,30 @@
 				}
 			],
 			"sid": 731707765450293
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 185254136301881,
+					"parameters": {
+						"object": "HTPButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 325918011436839,
+					"parameters": {
+						"layout": "How-To-Play Layout"
+					}
+				}
+			],
+			"sid": 405443328567147
 		}
 	],
 	"sid": 893256338039247

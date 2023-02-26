@@ -1,0 +1,203 @@
+{
+	"name": "How-To-Play Layout",
+	"layers": [
+		{
+			"name": "Layer 0",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "TiledBackground",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 40,
+						"enable-tile-randomization": false,
+						"x-random": 1,
+						"y-random": 1,
+						"angle-random": 1,
+						"blend-margin-x": 0.1,
+						"blend-margin-y": 0.1
+					},
+					"uid": 88,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -56,
+						"y": -39,
+						"width": 832,
+						"height": 1408,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							0.3
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "HTPLabel",
+					"properties": {
+						"text": "How To Play",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 36,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 90,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 126,
+						"y": 26,
+						"width": 465,
+						"height": 67,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ExitButton",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 91,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 644,
+						"y": 75,
+						"width": 96,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "HTPText",
+					"properties": {
+						"text": "Design a sword, craft it at the smithy, then see the results! Create the highest [b]Quality[/b] sword you can!\n\n\n[u][b]DESIGN PHASE[/b][/u]\n\nSelect components to adjust the sword's [b]damage (DMG)[/b], [b]speed (SPD)[/b], and [b]durability (DUR)[/b]. When you are done selecting components, press the [b]FORGE[/b] button to start smithing.\n\n\n[u][b]SMITHING PHASE[/b][/u]\n\nSmithing contains three minigames. You will have a short time during each game to add as much [b]Quality[/b] as you can to the final sword.\n\n1) At the forge, hold the bellows to pump air into the forge and heat it. The blue arrow shows how hot it is. Keep the blue arrow in the green area of the thermometer. [b]Forging will contribute more to Quality for swords with higher DUR.[/b]\n\n2) At the anvil, tap the anvil [i](not the hammer)[/i] when the green circles are right in the middle of the anvil plate. You will see \"PERFECT\", \"GOOD\", or \"OK\" depending on your timing. [b]Anvil strikes will contribute more to Quality for swords with higher DMG.[/b]\n\n3) At the whetstone, hold the stone to speed it up, and hold the sword to press it against the spinning stone and sharpen it. Faster whetstone speed will sharpen the sword faster. Past a certain point, the sword will start to break. [b]Sharpening will contribute more to Quality for swords with higher SPD.[/b]\n\n\n[u][b]RESULTS PHASE[/b][/u]\n\nYou can save your favorite swords by pressing the star button. Your most recent favorites can be seen by selecting \"Favorites\" on the title screen.",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 18,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 92,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 14,
+						"y": 125,
+						"width": 690,
+						"height": 1147,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 423453898540675,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"sid": 470485906329219,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 1440,
+	"height": 2560,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "How-To-Play Events"
+}

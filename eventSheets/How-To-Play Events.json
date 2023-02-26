@@ -1,0 +1,30 @@
+{
+	"name": "How-To-Play Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 816585221502279,
+					"parameters": {
+						"object": "ExitButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 651997921354600,
+					"parameters": {
+						"layout": "Title Layout"
+					}
+				}
+			],
+			"sid": 294563277537880
+		}
+	],
+	"sid": 368091318118381
+}

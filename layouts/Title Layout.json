@@ -72,8 +72,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 202,
-						"y": 1005,
+						"x": 185,
+						"y": 987,
 						"width": 409,
 						"height": 105,
 						"originX": 0,
@@ -314,10 +314,53 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 378,
-						"y": 1172,
+						"x": 431,
+						"y": 1119,
 						"width": 259,
 						"height": 82,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "HTPButton",
+					"properties": {
+						"text": "(?) How to Play (?)",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 32,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.07450980392156863,
+							0.6666666666666666,
+							0.1411764705882353,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 93,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2,
+						"y": 1200,
+						"width": 399,
+						"height": 66,
 						"originX": 0,
 						"originY": 0,
 						"color": [
